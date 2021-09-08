@@ -5,6 +5,7 @@
   --accent: #FF7BBA;
   --rgb-accent: 255 123 186;
   --accent-light: #FF8DC4;
+  --accent-lightest: #FFBADB;
   --accent-dark: #CF6F9D;
   --font-1: 'Rubik';
   --font-2: 'SF Pro Display';
@@ -161,7 +162,7 @@ h2 {
     text-align: center;
     font-size: 2.3em;
     font-weight: 400;
-    margin-bottom: .6em;
+    margin-bottom: 1em;
 }
 h3 {
     text-align: center;
@@ -193,6 +194,8 @@ h4 {
 .f_20 {font-size: 2em;}
 .white {color:#fff;}
 .black {color: #000;}
+.dark-gray {color: var(--dark-gray);}
+.light-gray {color: var(--light-gray);}
 .accent {color: var(--accent);}
 .accent-dark {color: var(--accent-dark);}
 

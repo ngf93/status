@@ -1,7 +1,20 @@
-const swiper1 = new Swiper('.swiper1', {
+const swiper1 = new Swiper('.swiper-1', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 24,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiper2 = new Swiper('.swiper-2', {
+  loop: true,
+  slidesPerView: 4,
+  spaceBetween: 48,
   pagination: {
     el: '.swiper-pagination',
   },
