@@ -2,6 +2,7 @@
   --dark-gray: #333333;
   --rgb-dark-gray: 51 51 51;
   --light-gray: #828282;
+  --lightest-gray: #BDBDBD;
   --accent: #FF7BBA;
   --rgb-accent: 255 123 186;
   --accent-light: #FF8DC4;
@@ -10,6 +11,34 @@
   --font-1: 'Rubik';
   --font-2: 'SF Pro Display';
 }
+
+/*****************
+SCROLL STYLIZATION
+******************/
+html {
+    scrollbar-color: #e0e0e0 transparent;
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+}
+::-webkit-scrollbar:hover, ::-webkit-scrollbar:active {background: #f2f2f2;}
+::-webkit-scrollbar-thumb {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {background-color: var(--lightest-gray);}
+::-webkit-scrollbar-thumb:active {background-color: var(--accent-lightest);}
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment {
+    display: none;
+}
+
 body {
     font-family: var(--font-1);
     font-size: 20px;
@@ -58,12 +87,12 @@ textarea, textarea:hover, textarea:focus, textarea:active,
 select, select:hover, select:focus, select:active {outline: none;}
 
 /* placeholder stylization */
-input:-moz-placeholder, textarea:-moz-placeholder {color: #CBCBCB; font-weight: 400;}
-input::-moz-placeholder, textarea::-moz-placeholder {color: #CBCBCB; font-weight: 400;}
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #CBCBCB; font-weight: 400;}
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {color: #CBCBCB; font-weight: 400;}
-input::-ms-input-placeholder, textarea::-ms-input-placeholder {color: #CBCBCB; font-weight: 400;}
-input::placeholder, textarea::placeholder {color: #CBCBCB; font-weight: 400;}
+input:-moz-placeholder, textarea:-moz-placeholder {color: var(--lightest-gray); font-weight: 400;}
+input::-moz-placeholder, textarea::-moz-placeholder {color: var(--lightest-gray); font-weight: 400;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: var(--lightest-gray); font-weight: 400;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color: var(--lightest-gray); font-weight: 400;}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {color: var(--lightest-gray); font-weight: 400;}
+input::placeholder, textarea::placeholder {color: var(--lightest-gray); font-weight: 400;}
 
 input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
 input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
@@ -73,15 +102,23 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 input, textarea, select {
-    border: none;
-    background-color: #f5f5f5;
-    border-radius: 0;
+    border: 1px solid #E0E0E0;
+    background: #fff;
+    border-radius: 5px;
     padding: .75em 1.5em;
     width: 100%;
     line-height: normal;
     box-shadow: unset;
 }
-
+input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
+    border: 1px solid var(--lightest-gray);
+}
+input:hover, textarea:hover {
+    border: 1px solid var(--light-gray);
+}
+input:focus, textarea:focus {
+    border: 1px solid var(--accent);
+}
 
 /* кнопки */
 button {
