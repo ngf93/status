@@ -17,15 +17,21 @@ body {
     position: relative;
     color: var(--dark-gray);
 }
+@media (max-width: 1659px) {
+    body {font-size: 18px;}
+}
+@media (max-width: 1399px){
+    body {font-size: 16px;}
+}
 @media (max-width: 1199px){
     body {font-size: 15px;}
 }
-@media (max-width: 991px){
+/* @media (max-width: 991px){
     body {font-size: 14px;}
 }
 @media (max-width: 575px){
     body {font-size: 13px;}
-}
+} */
 
 
 a, a:hover, a:focus, a:active {
@@ -92,13 +98,13 @@ button:hover, button:focus, button:active {cursor: pointer;}
     align-items: center;
     width: fit-content;
     line-height: 1.1em;
-    padding: 1.3em 3em;
+    padding: 1em;
     text-align: center;
     font-weight: 500;
-    font-size: .9em;
-    min-height: 2em;
     text-transform: uppercase;
     transition: .5s;
+    min-width: 12.5em;
+    min-height: 3.5em;
 }
 .btn_main:hover, .btn_main:focus, .btn_main:active {cursor: pointer;}
 .btn_1 {
@@ -148,7 +154,9 @@ button:hover, button:focus, button:active {cursor: pointer;}
     font-family: var(--font-2);
     font-weight: 600;
 }
-
+@media (max-width: 1199px) {
+    .btn-icon .count {line-height: 1.5em;}
+}
 
 /* TEXT STYLIZATION */
 h1, h2, h3, h4 {font-family: var(--font-2);}
@@ -165,9 +173,9 @@ h2 {
     margin-bottom: 1em;
 }
 h3 {
-    text-align: center;
+    text-align: left;
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: .6em;
 }
 h4 {
