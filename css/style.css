@@ -76,6 +76,12 @@ header .logo {
         background-position: left center;
     }
 }
+@media (max-width: 767px) {
+    #sec-1 {
+        height: 500px;
+        padding-top: 3em;
+    }
+}
 
 /* section 2 */
 .serv {
@@ -121,6 +127,13 @@ header .logo {
     .serv img {height: 215px;}
     .serv div {font-size: 1.25em;}
 }
+@media (max-width: 767px) {
+    .serv img {filter: grayscale(.5);}
+}
+@media (max-width: 575px) {
+    .serv img {height: 45vw;}
+    .serv div {font-size: 1em;}
+}
 
 /* section 3 */
 #sec-3 {
@@ -128,7 +141,14 @@ header .logo {
     background-size: cover;
     color: #fff;
     height: 700px;
-    padding-top: 7em;
+    /* padding-top: 7em; */
+}
+.remark {
+    position: absolute;
+    bottom: 3rem;
+    left: .75rem;
+    font-family: var(--font-2);
+    font-size: .9em;
 }
 @media (max-width: 1659px) {
     #sec-3 {height: 650px;}
@@ -137,55 +157,27 @@ header .logo {
     #sec-3 {height: 600px;}
 }
 @media (max-width: 1199px) {
-    #sec-3 {
-        height: 500px;
-        padding-top: 4em;
-    }
+    #sec-3 {height: 500px;}
 }
 @media (max-width: 991px) {
-    #sec-3 {
-        height: 450px;
-        padding-top: 0px;
-    }
+    #sec-3 {height: 450px;}
 }
 @media (max-width: 767px) {
-    #sec-3 {height: 350px;}
+    #sec-3 {
+        background-image: linear-gradient(to bottom, rgb(var(--rgb-dark-gray)/32%), rgb(var(--rgb-dark-gray)/32%)), url(../img/bg/bg2.jpg);
+    }
+    #sec-3 .f_12 {font-size: 1em;}
+    .remark {bottom: 1.5rem;}
+}
+@media (max-width: 575px) {
+    .remark {font-size: .8em;}
+    #sec-3 {
+        height: 420px;
+        background-position: 70% center;
+    }
 }
 
 /* section 4 */
-.swiper-1 {
-    overflow: hidden;
-    padding-bottom: 3em;
-}
-.swiper-pagination {bottom: 0px !important;}
-.swiper-pagination-bullet {
-    width: .8em;
-    height: .8em;
-    border-radius: 50%;
-    background-color: var(--light-gray);
-    opacity: 1;
-    margin: 0 .4em !important;
-}
-.swiper-pagination-bullet-active {background-color: var(--accent);}
-.swiper-button-prev {left: -1em;}
-.swiper-button-next {right: -1em;}
-.swiper-button-prev, .swiper-button-next {
-    width: 1.2em;
-    height: 3em;
-}
-.swiper-button-prev svg, .swiper-button-next svg {
-    width: 1.2em;
-    height: 3em;
-    fill: none;
-}
-.swiper-button-prev svg path, .swiper-button-next svg path {
-    stroke: var(--dark-gray);
-    stroke-width: 4px;
-    stroke-linecap: square;
-    stroke-linejoin: round;
-}
-.swiper-button-prev:after, .swiper-button-next:after {content: unset;}
-
 .offer {
     position: relative;
     overflow: hidden;
@@ -297,6 +289,22 @@ header .logo {
         padding: 3em 2em 3em 2em;
     }
 }
+@media (max-width: 575px) {
+    .offer::after {
+        top: .25em;
+        left: .25em;
+        bottom: .25em;
+        right: .25em;
+    }
+    .offer img {height: 65vw;}
+    .swiper-slide:nth-child(3n+1) .offer .text,
+    .swiper-slide:nth-child(3n+2) .offer .text,
+    .swiper-slide:nth-child(3n+3) .offer .text {
+        padding: 1em 1em 2em;
+    }
+    .offer .text .title {font-size: 1.1em;}
+    .offer .text .desc {font-size: .8em;}
+}
 
 /* section 5 */
 .employee {
@@ -372,7 +380,7 @@ header .logo {
 @media (max-width: 991px) {
     .employee {
         border-right: none;
-        border-bottom: 1px solid var(--accent);
+        border-top: 2px solid var(--accent);
         height: unset
     }
     .employee img {height: 275px;}
@@ -381,6 +389,15 @@ header .logo {
 @media (max-width: 767px) {
     .employee img {height: 210px;}
     .employee-preview img {height: 130px;}
+    .employee .btn_main {width: 100%;}
+}
+@media (max-width: 575px) {
+    .employee-preview img, .employee img {height: 35vw;}
+    .employee .f_15 {font-size: 1.3em;}
+    .employee .f_12 {font-size: .9em;}
+    .employee .text {
+        font-size: .8em;
+    }
 }
 
 
@@ -403,11 +420,28 @@ header .logo {
 @media (max-width: 991px) {
     #sec-6 .bg {background-size: calc(50% - 175px) 100%;}
 }
-.product-menu ul {
-    list-style: none;
-    padding-left: 0px;
+@media (max-width: 767px) {
+    #sec-6 .bg {
+        background-size: 100% 3em;
+    }
 }
-.product-menu li:not(:last-child){margin-bottom: 2em;}
+
+.product-menu {
+    position: relative;
+    overflow: hidden;
+}
+.product-menu .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+}
+.product-menu .swiper-slide {
+    width: fit-content;
+    height: 3em;
+    display: flex;
+}
+.product-menu .swiper-slide:not(:last-child){margin-bottom: 2em;}
+
 .product-menu a, .product-menu button {
     color: #fff;
     font-family: var(--font-2);
@@ -416,12 +450,6 @@ header .logo {
 }
 .product-menu a.active, .product-menu button.active {
     color: var(--accent);
-}
-.swiper-2 {overflow: hidden;}
-.swiper-2 .swiper-button-prev {left: 0em;}
-.swiper-2 .swiper-button-next {right: 0em;}
-.swiper-2 .swiper-button-prev svg path, .swiper-2 .swiper-button-next svg path {
-    stroke: var(--accent);
 }
 .product {
     font-family: var(--font-2);
@@ -469,6 +497,11 @@ header .logo {
 @media (max-width: 1399px) {
     .product .text {font-size: .8em;}
     .product .btn_main span {font-size: .9em;}
+}
+@media (max-width: 767px) {
+    .product-menu .swiper-wrapper {
+        flex-direction: row;
+    }
 }
 
 

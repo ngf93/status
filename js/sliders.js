@@ -1,7 +1,7 @@
 const swiper1 = new Swiper('.swiper-1', {
     loop: true,
     slidesPerView: 2,
-    spaceBetween: 16,
+    spaceBetween: 10,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -12,6 +12,10 @@ const swiper1 = new Swiper('.swiper-1', {
         clickable: true,
     },
     breakpoints: {
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+        },
         768: {
             slidesPerView: 2,
             spaceBetween: 24,
@@ -46,3 +50,30 @@ const swiper2 = new Swiper('.swiper-2', {
         }
     }
 });
+
+const swiper3 = new Swiper('.swiper-3', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    breakpoints: {
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+        },
+    }
+});
+
+const swiper4 = new Swiper('.product-menu', {
+    loop: false,
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    freeMode: true,
+});
+
+if (window.matchMedia("(min-width: 768px)").matches) {
+  swiper4.destroy(true, true);
+} 

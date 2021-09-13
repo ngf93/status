@@ -64,11 +64,11 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-7 col-sm-6 col-lg-5 col-xl-4">
-					<img src="img/logo-dark.svg" alt="Студия красоты Status" class="mb-3">
-					<div class="ps-5">
+					<img src="img/logo-dark.svg" alt="Студия красоты Status" class="d-none d-md-block mb-3">
+					<div class="ps-md-5">
 						<h1>Студия красоты</h1>
 						<div>Команда профессионалов для создания Вашего совешенного образа</div>
-						<button type="button" class="btn_main btn_1 mt-5"><span class="f_09">Подробнее</span></button>
+						<button type="button" class="btn_main btn_1 mt-4 mt-md-5"><span class="f_09">Подробнее</span></button>
 					</div>
 				</div>
 			</div>
@@ -135,18 +135,18 @@
 	</section>
 
 	<section id="sec-3" class="mb_4">
-		<div class="container py-4 py-md-5 h-100">
+		<div class="container position-relative py-4 py-md-5 h-100">
 			<div class="row h-100">
-				<div class="col-10 col-md-8 d-flex flex-column justify-content-between">
+				<div class="col-md-8 d-flex flex-column justify-content-center">
 					<div>
 						<h3>Окрашивание дома с индивидуальным коктейлем!</h3>
-						<div class="f_12 font-2 mb-4 mb-md-5">Подберите Ваш индивидуальный оттенок с помощью профессионалов!</div>
-						<button type="button" class="btn_main btn_1"><span class="f_09">Подобрать оттенок</span></button>
+						<div class="text-center text-md-start f_12 font-2 mb-4 mb-md-5">Подберите Ваш индивидуальный оттенок с помощью профессионалов!</div>
+						<button type="button" class="btn_main btn_1 mx-auto ms-md-0 me-md-auto mb-4 mb-md-5"><span class="f_09">Подобрать оттенок</span></button>
 					</div>
-					<div class="font-2 f_09">*Хотим отметить, что дома вы можете покраситься самостоятельно только в однотонный цвет.</div>
+					
 				</div>
 			</div>
-			
+			<div class="remark">*Хотим отметить, что дома вы можете покраситься самостоятельно только в однотонный цвет.</div>
 		</div>
 	</section>
 
@@ -207,47 +207,9 @@
 	<section id="sec-5" class="mb_4">
 		<div class="container">
 			<h2>Наша команда</h2>
-			<div class="row row-cols-lg-2">
-				<div>
-					<div class="employee pb-4 pb-lg-0 mb-4 mb-lg-5 mb-lg-0">
-						<div class="row row-cols-2">
-							<div>
-								<img src="img/team/3.png" alt="Мария">
-							</div>
-							<div>
-								<div class="f_15 font-2 dark-gray fw_6 mb-1">Мария</div>
-								<div class="f_12 font-2 dark-gray mb-1">Мастер бровист</div>
-								<div class="f_12 font-2 dark-gray">Стаж работы 5 лет</div>
-								<div class="rating mt-4">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-								</div>
-								<div class="text mt-4">Короткое описание мастера, регалии, сертификаты и предоставляеммые услуги</div>
-							</div>
-							<div class="mt-xl-5">
-								<button type="button" class="btn_main btn_2 mx-auto mt-4 mt-lg-5"><span class="f_09">Подробнее</span></button>
-							</div>
-							<div class="mt-xl-5">
-								<button type="button" class="btn_main btn_1 mx-auto mt-4 mt-lg-5"><span class="f_09">Записаться</span></button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="row row-cols-3 gy-4 gy-xl-5 mb-4 mb-xl-5">
+			<div class="row flex-lg-row-reverse row-cols-lg-2">
+				<div class="pb-4 pb-lg-0">
+					<div class="d-none d-lg-flex row row-cols-3 gy-4 gy-xl-5 mb-4 mb-xl-5">
 						<div>
 							<div class="employee-preview">
 								<img src="img/team/1.png" alt="Альфия" class="mb-2">
@@ -291,7 +253,101 @@
 							</div>
 						</div>
 					</div>
-					<div class="text-center"><a href="#" class="font-2 f_09 fw_6 accent bb_1">Показать всех</a></div>
+					<div class="d-block d-lg-none swiper-3">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="employee-preview">
+									<img src="img/team/1.png" alt="Альфия" class="mb-2">
+									<div class="f_12 dark-gray fw_6 mb-1">Альфия</div>
+									<div class="light-gray f_09">Мастер ногтевого сервиса</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="employee-preview">
+									<img src="img/team/2.png" alt="Ольга" class="mb-2">
+									<div class="f_12 dark-gray fw_6 mb-1">Ольга</div>
+									<div class="light-gray f_09">Мастер ногтевого сервиса</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="employee-preview active">
+									<img src="img/team/3.png" alt="Мария" class="mb-2">
+									<div class="f_12 dark-gray fw_6 mb-1">Мария</div>
+									<div class="light-gray f_09">Мастер бровист</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="employee-preview">
+									<img src="img/team/4.png" alt="Анастасия" class="mb-2">
+									<div class="f_12 dark-gray fw_6 mb-1">Анастасия</div>
+									<div class="light-gray f_09">Парикмахер, коллорист</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="employee-preview">
+									<img src="img/team/5.png" alt="Максим" class="mb-2">
+									<div class="f_12 dark-gray fw_6 mb-1">Максим</div>
+									<div class="light-gray f_09">Парикмахер</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="employee-preview">
+									<img src="img/team/6.png" alt="Виктория" class="mb-2">
+									<div class="f_12 dark-gray fw_6 mb-1">Виктория</div>
+									<div class="light-gray f_09">Косметолог</div>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="swiper-button-prev">
+							<svg viewBox="0 0 24 62" xmlns="http://www.w3.org/2000/svg">
+								<path d="M21.1192 58.3865L2 30.6932L21.1192 3"/>
+							</svg>
+						</div>
+						<div class="swiper-button-next">
+							<svg viewBox="0 0 25 62" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3.23486 58.3865L22.354 30.6932L3.23486 3"/>
+							</svg>
+						</div> -->
+					</div>
+					<div class="text-center d-none d-lg-block"><a href="#" class="font-2 f_09 fw_6 accent bb_1">Показать всех</a></div>
+				</div>
+				<div>
+					<div class="employee pt-4 pt-lg-0 mb-4 mb-lg-5 mb-lg-0">
+						<div class="row row-cols-2 gx-2 gx-sm-4">
+							<div>
+								<img src="img/team/3.png" alt="Мария">
+							</div>
+							<div>
+								<div class="f_15 font-2 dark-gray fw_6 mb-1">Мария</div>
+								<div class="f_12 font-2 dark-gray mb-1">Мастер бровист</div>
+								<div class="f_12 font-2 dark-gray">Стаж работы 5 лет</div>
+								<div class="rating mt-2 mt-sm-4">
+									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+									</svg>
+									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+									</svg>
+									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+									</svg>
+									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+									</svg>
+									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+									</svg>
+								</div>
+								<div class="text mt-2 mt-sm-4">Короткое описание мастера, регалии, сертификаты и предоставляеммые услуги</div>
+							</div>
+							<div class="mt-xl-5">
+								<button type="button" class="btn_main btn_2 mx-auto mt-3 mt-sm-4 mt-lg-5"><span class="f_09">Подробнее</span></button>
+							</div>
+							<div class="mt-xl-5">
+								<button type="button" class="btn_main btn_1 mx-auto mt-3 mt-sm-4 mt-lg-5"><span class="f_09">Записаться</span></button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -302,19 +358,31 @@
 		<div class="bg mb-5">
 			<div class="container">
 				<div class="row g-0">
-					<div class="col-3">
+					<div class="col-md-3">
 						<div class="h-100 d-flex flex-column justify-content-center">
-							<nav class="product-menu">
-								<ul>
+							
+							<!-- <nav class="product-menu">
+								<ul class="d-none">
 									<li><button type="button" class="active">Уход за волосами</button></li>
 									<li><button type="button">Уход за лицом</button></li>
 									<li><button type="button">Уход за телом</button></li>
 									<li><button type="button">Уход за ногтями</button></li>
 								</ul>
+							</nav> -->
+							<nav class="product-menu">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<button type="button" class="active">Уход за волосами</button>
+									</div>
+									<div class="swiper-slide"><button type="button">Уход за лицом</button></div>
+									<div class="swiper-slide"><button type="button">Уход за телом</button></div>
+									<div class="swiper-slide"><button type="button">Уход за ногтями</button></div>
+								</div>
 							</nav>
+							
 						</div>
 					</div>
-					<div class="col-9 py-5">
+					<div class="col-md-9 py-4 py-lg-5">
 						<div class="position-relative px-5">
 							<div class="swiper-2">
 								<div class="swiper-wrapper">
