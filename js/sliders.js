@@ -30,12 +30,16 @@ const swiper1 = new Swiper('.swiper-1', {
 const swiper2 = new Swiper('.swiper-2', {
     loop: true,
     slidesPerView: 2,
-    spaceBetween: 24,
+    spaceBetween: 10,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+        },
         992: {
             slidesPerView: 3,
             spaceBetween: 24,

@@ -55,7 +55,7 @@ body {
 @media (max-width: 1199px){
     body {font-size: 15px;}
 }
-@media (max-width: 575px){
+@media (max-width: 767px){
     body {font-size: 14px;}
 }
 
@@ -192,7 +192,11 @@ button:hover, button:focus, button:active {cursor: pointer;}
     .btn-icon .count {line-height: 1.5em;}
 }
 @media (max-width: 575px) {
-    .btn_main {min-width: unset;}
+    .btn_main {
+        min-width: unset;
+        min-height: 2.7em;
+        padding: .5em 1em;
+    }
 }
 
 /* TEXT STYLIZATION */
