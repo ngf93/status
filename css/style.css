@@ -509,6 +509,7 @@ header .logo {
     color: #fff;
     padding: 4em 0 7em;
 }
+#map {height: 400px;}
 .callback-anim {
     position: absolute;
     bottom: -3em;
@@ -542,6 +543,17 @@ header .logo {
         height: 6em;
         padding: 0px;
     }
+}
+@media (max-width: 767px) {
+    #sec-7 {padding: 3em 0;}
+    #sec-7 .f_12 {font-size: 1em;}
+    .callback-anim {display: none;}
+    #map {height: 300px;}
+}
+@media (max-width: 575px) {
+    #sec-7 {padding: 2em 0;}
+    #sec-7 .f_12 {font-size: .9em;}
+    #map {height: 215px;}
 }
 
 
@@ -622,7 +634,7 @@ footer.mobile {
 }
 footer.mobile a {
     text-align: center;
-    font-size: 10px;
+    font-size: 8px;
     color: var(--light-gray);
 }
 footer.mobile a svg {
