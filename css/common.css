@@ -141,6 +141,10 @@ button:hover, button:focus, button:active {cursor: pointer;}
     min-height: 3.5em;
 }
 .btn_main:hover, .btn_main:focus, .btn_main:active {cursor: pointer;}
+.btn_sm {
+    min-height: 2.4em;
+    padding: .5em 1em;
+}
 .btn_1 {
     color: #fff;
     background-color: var(--accent);
@@ -148,7 +152,7 @@ button:hover, button:focus, button:active {cursor: pointer;}
 }
 .btn_2 {
     color: var(--accent);
-    background-color: transparent;
+    background-color: #fff;
     border: 1px solid var(--accent);
 }
 .btn_1:hover, .btn_1:focus, .btn_2:hover, .btn_2:focus {
@@ -207,6 +211,12 @@ h1 {
     text-align: left;
     margin-bottom: .5em;
 }
+h1.inner {
+    font-size: 1.8em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1em;
+}
 h2 {
     text-align: center;
     font-size: 2.3em;
@@ -220,9 +230,9 @@ h3 {
     margin-bottom: .6em;
 }
 h4 {
-    text-align: left;
+    text-align: center;
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 1em;
 }
 @media (max-width: 767px) {
@@ -271,6 +281,14 @@ h4 {
 .lh_n {line-height: normal;}
 .bb_1 {border-bottom: 1px solid;}
 
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    border: none;
+    opacity: 1;
+}
+
 .mb_4 {margin-bottom: 4em;}
 @media (max-width: 575px){
     .mb_4 {margin-bottom: 3em;}
@@ -281,13 +299,54 @@ h4 {
     .container {min-width: 1600px;}
 }
 
+main.inner-page {
+    padding: 5em 0;
+    min-height: calc(100vh - 528px);
+}
+@media (max-width: 1659px){
+    main.inner-page {min-height: calc(100vh - 487.16px);}
+}
+@media (max-width: 1399px){
+    main.inner-page {min-height: calc(100vh - 446.31px);}
+}
+@media (max-width: 1199px){
+    main.inner-page {min-height: calc(100vh - 426px);}
+}
+@media (max-width: 991px){
+    main.inner-page {padding: 4em 0;}
+}
+@media (max-width: 767px){
+    main.inner-page {
+        min-height: calc(100vh - 115px);
+        padding: 2.5em 0;
+    }
+}
+@media (max-width: 575px){
+    main.inner-page {padding: 1em 0;}
+}
+
+
+/* breadcrumb */
+.breadcrumb {margin-bottom: 1em;}
+.breadcrumb-item a {
+    color: #000;
+    font-size: 1em;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+    color: #000;
+}
+@media (max-width: 767px){
+    .breadcrumb-item a {font-size: .7em;}
+}
+
 
 /* SLIDERS */
 .swiper-1 {
     overflow: hidden;
     padding-bottom: 3em;
 }
-.swiper-2, .swiper-3, .swiper-4 {overflow: hidden;}
+.swiper-2, .swiper-3, .swiper-4, .swiper-5 {overflow: hidden;}
 
 .swiper-pagination {bottom: 0px !important;}
 .swiper-pagination-bullet {
@@ -300,14 +359,17 @@ h4 {
 }
 .swiper-pagination-bullet-active {background-color: var(--accent);}
 
-.swiper-button-prev {left: -1em;}
-.swiper-button-next {right: -1em;}
+.swiper-button-prev {left: -1.75em;}
+.swiper-button-next {right: -1.75em;}
 .swiper-2 .swiper-button-prev {left: 0em;}
 .swiper-2 .swiper-button-next {right: 0em;}
 .swiper-button-prev, .swiper-button-next {
     width: 1.2em;
     height: 3em;
+    margin-top: 0px;
+    top: calc(50% - 1.5em);
 }
+.swiper-1 .swiper-button-prev, .swiper-1 .swiper-button-next {top: calc(50% - 3em);}
 .swiper-button-prev:after, .swiper-button-next:after {content: unset;}
 .swiper-button-prev svg, .swiper-button-next svg {
     width: 1.2em;
@@ -320,14 +382,32 @@ h4 {
     stroke-linecap: square;
     stroke-linejoin: round;
 }
-.swiper-2 .swiper-button-prev svg path, .swiper-2 .swiper-button-next svg path {
+.swiper-2 .swiper-button-prev svg path, .swiper-2 .swiper-button-next svg path,
+.swiper-5 .swiper-button-prev svg path, .swiper-5 .swiper-button-next svg path {
     stroke: var(--accent);
 }
-
+@media (max-width: 1199px) {
+    .swiper-button-prev {left: -1.5em;}
+    .swiper-button-next {right: -1.5em;}
+}
 @media (max-width: 767px) {
+    .swiper-button-prev {left: 1.5em;}
+    .swiper-button-next {right: 1.5em;}
+    .swiper-button-prev svg path, .swiper-button-next svg path {
+        stroke: var(--accent);
+    }
     .swiper-1 {padding-bottom: 2.5em;}
     .swiper-pagination-bullet {
         width: .5em;
         height: .5em;
     }
+}
+
+
+/** TABLES **/
+.table>tbody {border-top: 2px solid #F2F2F2;}
+.table tr {border-bottom: 2px solid #F2F2F2;}
+.table td {
+    vertical-align: middle;
+    border: none !important;
 }

@@ -18,20 +18,20 @@
 <body>
 	<header>
 		<div class="container py-md-3">
-			<div class="row align-items-center">
-				<div class="col-2 d-block d-lg-none">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-3 col-sm-2 d-block d-lg-none">
 					<button type="button" class="burger" data-bs-toggle="offcanvas" data-bs-target="#burger-menu">
 						<i class="fas fa-bars"></i>
 					</button>
 				</div>
-				<div class="col-3 col-md-2">
-					<img src="img/logo-white.svg" alt="Студия красоты" class="logo">
+				<div class="col-4 col-sm-3 col-md-2">
+					<a href="index.html"><img src="img/logo-white.svg" alt="Студия красоты" class="logo"></a>
 				</div>
-				<div class="col-4 col-md-6 col-lg-8">
+				<div class="d-none d-sm-block col-4 col-md-6 col-lg-8">
 					<div class="text-end fw_3 mb-lg-2"><a href="tel:+79879877878">+7 (987) 987-78-78</a></div>
 					<nav class="d-none d-lg-block main-menu">
 						<ul>
-							<li><a href="">Услуги</a></li>
+							<li><a href="services.html">Услуги</a></li>
 							<li><a href="">Акции</a></li>
 							<li><a href="">каталог</a></li>
 							<li><a href="">Команда</a></li>
@@ -40,7 +40,7 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="col-3 col-md-2 d-flex justify-content-center">
+				<div class="col-4 col-sm-3 col-md-2 d-flex justify-content-center">
 					<button type="button" class="btn-icon">
 						<svg width="40" height="38" viewBox="0 0 40 38" xmlns="http://www.w3.org/2000/svg">
 							<path d="M19.9998 9.35485C21.8332 9.35485 23.3332 10.7581 23.3332 12.4731C23.3332 14.1882 21.8332 15.5914 19.9998 15.5914C18.1665 15.5914 16.6665 14.1882 16.6665 12.4731C16.6665 10.7581 18.1665 9.35485 19.9998 9.35485ZM19.9998 23.3871C24.4998 23.3871 29.6665 25.3984 29.9998 26.5054V28.0645H9.99984V26.521C10.3332 25.3984 15.4998 23.3871 19.9998 23.3871ZM19.9998 6.23657C16.3165 6.23657 13.3332 9.02743 13.3332 12.4731C13.3332 15.9188 16.3165 18.7097 19.9998 18.7097C23.6832 18.7097 26.6665 15.9188 26.6665 12.4731C26.6665 9.02743 23.6832 6.23657 19.9998 6.23657ZM19.9998 20.2688C15.5498 20.2688 6.6665 22.3581 6.6665 26.5054V31.1828H33.3332V26.5054C33.3332 22.3581 24.4498 20.2688 19.9998 20.2688Z"/>
@@ -61,12 +61,9 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-7 col-sm-6 col-lg-5 col-xl-4">
-					<img src="img/logo-dark.svg" alt="Студия красоты Status" class="d-none d-md-block mb-3">
-					<div class="ps-md-5">
-						<h1>Студия красоты</h1>
-						<div>Команда профессионалов для создания Вашего совешенного образа</div>
-						<button type="button" class="btn_main btn_1 mt-4 mt-md-5"><span class="f_09">Подробнее</span></button>
-					</div>
+					<h1>Студия красоты</h1>
+					<div>Команда профессионалов для создания Вашего совешенного образа</div>
+					<button type="button" class="btn_main btn_1 mt-4 mt-md-5"><span class="f_09">Подробнее</span></button>
 				</div>
 			</div>
 		</div>
@@ -148,54 +145,56 @@
 	</section>
 
 	<section id="sec-4" class="mb_4">
-		<div class="container position-relative">
+		<div class="container">
 			<h2>Акции и спецпредложения</h2>
-			<div class="swiper-1">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="offer">
-							<img src="img/serv2.jpg" alt="">
-							<div class="text">
-								<div class="title mb-2">
-									<span class="f_12">30%</span> скидка
+			<div class="position-relative">
+				<div class="swiper-1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="offer">
+								<img src="img/serv2.jpg" alt="">
+								<div class="text">
+									<div class="title mb-2">
+										<span class="f_12">30%</span> скидка
+									</div>
+									<div class="desc">действует в будние дни с 10:00 до 12:00</div>
 								</div>
-								<div class="desc">действует в будние дни с 10:00 до 12:00</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="offer">
+								<img src="img/serv1.jpg" alt="">
+								<div class="text">
+									<div class="title mb-2">
+										<span class="f_12">15%</span> скидка
+									</div>
+									<div class="desc">на стрижку горячими ножницами</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="offer">
+								<img src="img/serv7.jpg" alt="">
+								<div class="text">
+									<div class="title mb-2">
+										<span class="f_12">10%</span> скидка
+									</div>
+									<div class="desc">На услуги вазажиста</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="offer">
-							<img src="img/serv1.jpg" alt="">
-							<div class="text">
-								<div class="title mb-2">
-									<span class="f_12">15%</span> скидка
-								</div>
-								<div class="desc">на стрижку горячими ножницами</div>
-							</div>
-						</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev">
+						<svg viewBox="0 0 24 62" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21.1192 58.3865L2 30.6932L21.1192 3"/>
+						</svg>
 					</div>
-					<div class="swiper-slide">
-						<div class="offer">
-							<img src="img/serv7.jpg" alt="">
-							<div class="text">
-								<div class="title mb-2">
-									<span class="f_12">10%</span> скидка
-								</div>
-								<div class="desc">На услуги вазажиста</div>
-							</div>
-						</div>
+					<div class="swiper-button-next">
+						<svg viewBox="0 0 25 62" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3.23486 58.3865L22.354 30.6932L3.23486 3"/>
+						</svg>
 					</div>
-				</div>
-				<div class="swiper-pagination"></div>
-				<div class="swiper-button-prev">
-					<svg viewBox="0 0 24 62" xmlns="http://www.w3.org/2000/svg">
-						<path d="M21.1192 58.3865L2 30.6932L21.1192 3"/>
-					</svg>
-				</div>
-				<div class="swiper-button-next">
-					<svg viewBox="0 0 25 62" xmlns="http://www.w3.org/2000/svg">
-						<path d="M3.23486 58.3865L22.354 30.6932L3.23486 3"/>
-					</svg>
 				</div>
 			</div>
 		</div>
@@ -295,16 +294,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="swiper-button-prev">
-							<svg viewBox="0 0 24 62" xmlns="http://www.w3.org/2000/svg">
-								<path d="M21.1192 58.3865L2 30.6932L21.1192 3"/>
-							</svg>
-						</div>
-						<div class="swiper-button-next">
-							<svg viewBox="0 0 25 62" xmlns="http://www.w3.org/2000/svg">
-								<path d="M3.23486 58.3865L22.354 30.6932L3.23486 3"/>
-							</svg>
-						</div> -->
 					</div>
 					<div class="text-center d-none d-lg-block"><a href="#" class="font-2 f_09 fw_6 accent bb_1">Показать всех</a></div>
 				</div>
@@ -551,7 +540,7 @@
 		</div>
 	</footer>
 
-	<footer class="mobile">
+	<footer class="d-block d-md-none mobile">
 		<div class="container h-100 d-flex justify-content-around align-items-center">
 			<a href="" class="active">
 				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -587,18 +576,28 @@
 	</footer>
 
 	<div class="offcanvas offcanvas-start" tabindex="-1" id="burger-menu">
-		<div class="offcanvas-body p-5 d-flex justify-content-center align-items-center position-relative">
-			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
-			<nav class="main-menu">
-				<ul>
-					<li><a href="">Услуги</a></li>
-					<li><a href="">Акции</a></li>
-					<li><a href="">каталог</a></li>
-					<li><a href="">Команда</a></li>
-					<li><a href="">О нас</a></li>
-					<li><a href="">Контакты</a></li>
-				</ul>
-			</nav>
+		<div class="offcanvas-body">
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+				<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
+					<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
+				</svg>
+			</button>
+			<div>
+				<h3 class="white text-center text-sm-start mb-5">Меню</h3>
+				<nav class="main-menu">
+					<ul>
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="">Запись</a></li>
+						<li><a href="">Услуги</a></li>
+						<li><a href="">Акции</a></li>
+						<li><a href="">каталог</a></li>
+						<li><a href="">Команда</a></li>
+						<li><a href="">О нас</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</div>
 

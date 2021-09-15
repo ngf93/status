@@ -78,6 +78,34 @@ const swiper4 = new Swiper('.product-menu', {
     freeMode: true,
 });
 
+const swiper5 = new Swiper('.swiper-5', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 8,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+        }
+    }
+});
+
 if (window.matchMedia("(min-width: 768px)").matches) {
   swiper4.destroy(true, true);
 } 
