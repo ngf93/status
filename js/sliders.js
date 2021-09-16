@@ -77,6 +77,7 @@ const swiper4 = new Swiper('.product-menu', {
     spaceBetween: 24,
     freeMode: true,
 });
+console.log('swiper4'+swiper4);
 
 const swiper5 = new Swiper('.swiper-5', {
     loop: true,
@@ -106,6 +107,37 @@ const swiper5 = new Swiper('.swiper-5', {
     }
 });
 
+const swiper6 = new Swiper('.swiper-6', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 0,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 4,
+        }
+    }
+});
+console.log('swiper6'+swiper6);
+
 if (window.matchMedia("(min-width: 768px)").matches) {
-  swiper4.destroy(true, true);
+    if(document.querySelector('.product-menu')!= null){
+        swiper4.destroy(true, true);
+    }
+    if(document.querySelector('.swiper-6')!= null){
+        swiper6.destroy(true, true);
+    }
 } 
