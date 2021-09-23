@@ -632,6 +632,25 @@ header .logo {
 }
 
 
+/* section 10 */
+.master-page .photo {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.master-page ul {
+    padding-left: 0px;
+    list-style: none;
+}
+.master-page ul li {margin-bottom: .75em;}
+.master-page table tr td:first-child {text-align: left;}
+
+.review {
+    border: 1px solid var(--lightest-gray);
+    padding: 1em;
+}
+
+
 footer {
     background-color: #202020;
     color: #fff;
