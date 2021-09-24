@@ -58,6 +58,9 @@ body {
 @media (max-width: 767px){
     body {font-size: 14px;}
 }
+@media (max-width: 575px){
+    body {font-size: 12px;}
+}
 
 
 a, a:hover, a:focus, a:active {
@@ -363,7 +366,7 @@ main.inner-page {
 }
 @media (max-width: 767px){
     .breadcrumb {margin-bottom: 1em;}
-    .breadcrumb-item a {font-size: .7em;}
+    .breadcrumb-item a {font-size: .8em;}
 }
 
 

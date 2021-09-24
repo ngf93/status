@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Status - Команда</title>
+	<title>Status - каталог</title>
 	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -62,295 +62,136 @@
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-					<li class="breadcrumb-item"><a href="team.html">Команда</a></li>
+					<li class="breadcrumb-item"><a href="catalog.html">Католог</a></li>
 				</ol>
 			</nav>
 		</div>
 
-		<section>
+		<section >
 			<div class="container">
-				<h1 class="inner">Команда</h1>
-				<div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 gx-0 gy-4">
-					<div>
-						<div class="master">
-							<img src="img/team/1.png">
-							<div class="p-2 p-md-4">
-								<div class="font-2 f_12 fw_6 mb-md-2"><a href="master.html">Елена</a></div>
-								<div class="font-2 f_09 mb-2 mb-md-3">Топ коллорист</div>
-								<div class="rating justify-content-center mb-2 mb-md-3">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
+				<h1 class="inner">Католог товаров</h1>
+				<div class="row">
+					<div class="col-md-3">
+						<div>Категория:</div>
+					</div>
+					<div class="col-md-9">
+						<div class="d-flex justify-content-between mb-5">
+							<select name="" id="">
+								<option value="Популярное">Популярное</option>
+								<option value="По возрастанию цены">По возрастанию цены</option>
+								<option value="По убыванию цены">По убыванию цены</option>
+							</select>
+							<input type="search" placeholder="Поиск...">
+						</div>
+
+						<div class="row g-5 row-cols-2 row-cols-lg-3 row-cols-xxl-4">
+							<div>
+								<div class="product">
+									<img src="img/product/1.jpg" alt="" class="mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Matrix Кондиционер для окрашенных волос, с антиоксидантами, для глазурирования цвета, Total Results Keep Me Vivid, 300 мл</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<button type="button" class="btn_main f_08 btn_2 px-3 px-sm-4 py-2" data-state="off" onclick="toggleState(this)"><span></span></button>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
 								</div>
-								<a href="master.html" class="btn_main btn_sm btn_2 mx-auto mb-2 mb-md-3">
-									<span class="f_08 light-gray">о мастере</span>
-								</a>
-								<button type="button" class="btn_main btn_sm btn_1 mx-auto">
-									<span class="f_08">Записаться</span>
-								</button>
+							</div>
+							<div>
+								<div class="product">
+									<img src="img/product/2.jpg" alt="" class="mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae dolorem perspiciatis explicabo cumque quidem placeat laborum deserunt, provident laboriosam saepe?</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<button type="button" class="btn_main f_08 btn_2 px-3 px-sm-4 py-2" data-state="off" onclick="toggleState(this)"><span></span></button>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<img src="img/product/3.jpg" alt="" class="mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae eum, repellat cum aperiam quibusdam harum! </div>
+									<div class="d-flex justify-content-between align-items-center">
+										<button type="button" class="btn_main f_08 btn_2 px-3 px-sm-4 py-2" data-state="off" onclick="toggleState(this)"><span></span></button>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<img src="img/product/4.jpg" alt="" class="mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam commodi earum, impedit blanditiis voluptas doloremque esse omnis. </div>
+									<div class="d-flex justify-content-between align-items-center">
+										<button type="button" class="btn_main f_08 btn_2 px-3 px-sm-4 py-2" data-state="off" onclick="toggleState(this)"><span></span></button>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<img src="img/product/1.jpg" alt="" class="mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Matrix Кондиционер для окрашенных волос, с антиоксидантами, для глазурирования цвета, Total Results Keep Me Vivid, 300 мл</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<button type="button" class="btn_main f_08 btn_2 px-3 px-sm-4 py-2" data-state="off" onclick="toggleState(this)"><span></span></button>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<img src="img/product/2.jpg" alt="" class="mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae dolorem perspiciatis explicabo cumque quidem placeat laborum deserunt, provident laboriosam saepe?</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<button type="button" class="btn_main f_08 btn_2 px-3 px-sm-4 py-2" data-state="off" onclick="toggleState(this)"><span></span></button>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<img src="img/product/3.jpg" alt="" class="mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae eum, repellat cum aperiam quibusdam harum! </div>
+									<div class="d-flex justify-content-between align-items-center">
+										<button type="button" class="btn_main f_08 btn_2 px-3 px-sm-4 py-2" data-state="off" onclick="toggleState(this)"><span></span></button>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<img src="img/product/4.jpg" alt="" class="mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam commodi earum, impedit blanditiis voluptas doloremque esse omnis. </div>
+									<div class="d-flex justify-content-between align-items-center">
+										<button type="button" class="btn_main f_08 btn_2 px-3 px-sm-4 py-2" data-state="off" onclick="toggleState(this)"><span></span></button>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div>
-						<div class="master">
-							<img src="img/team/4.png">
-							<div class="p-2 p-md-4">
-								<div class="font-2 f_12 fw_6 mb-md-2"><a href="master.html">Анастасия</a></div>
-								<div class="font-2 f_09 mb-2 mb-md-3">Парикмахер, коллорист</div>
-								<div class="rating justify-content-center mb-2 mb-md-3">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-								</div>
-								<a href="master.html" class="btn_main btn_sm btn_2 mx-auto mb-2 mb-md-3">
-									<span class="f_08 light-gray">о мастере</span>
-								</a>
-								<button type="button" class="btn_main btn_sm btn_1 mx-auto">
-									<span class="f_08">Записаться</span>
-								</button>
+
+						<button type="button" class="accent f_09 fw_5 bb_1 mx-auto mt-5">Показать еще</button>
+						<div class="row row-cols-md-2 justify-content-end mt-4">
+							<div>
+								<nav aria-label="Page navigation" class="ms-0">
+									<ul class="pagination">
+										<li class="page-item"><a class="btn_main btn_xs f_08 btn_3" href="#">В начало</a></li>
+										<li class="page-item"><a class="page-link" href="#">...</a></li>
+										<li class="page-item"><a class="page-link" href="#">1</a></li>
+										<li class="page-item"><a class="page-link active" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">4</a></li>
+										<li class="page-item"><a class="page-link" href="#">5</a></li>
+										<li class="page-item"><a class="page-link" href="#">6</a></li>
+										<li class="page-item"><a class="page-link" href="#">...</a></li>
+										<li class="page-item"><a class="btn_main btn_xs f_08 btn_3" href="#">Дальше</a></li>
+									</ul>
+								</nav>
 							</div>
-						</div>
-					</div>
-					<div>
-						<div class="master">
-							<img src="img/team/5.png">
-							<div class="p-2 p-md-4">
-								<div class="font-2 f_12 fw_6 mb-md-2"><a href="master.html">Максим</a></div>
-								<div class="font-2 f_09 mb-2 mb-md-3">Парикмахер</div>
-								<div class="rating justify-content-center mb-2 mb-md-3">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
+							<div class="mt-3 mt-md-0">
+								<div class="d-flex align-items-center justify-content-center justify-content-md-end">
+									<div class="f_08 font-2 me-3">Перейти на страницу</div>
+									<input type="number" class="mini f_08 me-3">
+									<button type="button" class="f_08 btn_3 btn_main btn_xs">Перейти</button>
 								</div>
-								<a href="master.html" class="btn_main btn_sm btn_2 mx-auto mb-2 mb-md-3">
-									<span class="f_08 light-gray">о мастере</span>
-								</a>
-								<button type="button" class="btn_main btn_sm btn_1 mx-auto">
-									<span class="f_08">Записаться</span>
-								</button>
 							</div>
-						</div>
-					</div>
-					<div>
-						<div class="master">
-							<img src="img/team/1.png">
-							<div class="p-2 p-md-4">
-								<div class="font-2 f_12 fw_6 mb-md-2"><a href="master.html">Елена</a></div>
-								<div class="font-2 f_09 mb-2 mb-md-3">Топ коллорист</div>
-								<div class="rating justify-content-center mb-2 mb-md-3">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-								</div>
-								<a href="master.html" class="btn_main btn_sm btn_2 mx-auto mb-2 mb-md-3">
-									<span class="f_08 light-gray">о мастере</span>
-								</a>
-								<button type="button" class="btn_main btn_sm btn_1 mx-auto">
-									<span class="f_08">Записаться</span>
-								</button>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="master">
-							<img src="img/team/4.png">
-							<div class="p-2 p-md-4">
-								<div class="font-2 f_12 fw_6 mb-md-2"><a href="master.html">Анастасия</a></div>
-								<div class="font-2 f_09 mb-2 mb-md-3">Парикмахер, коллорист</div>
-								<div class="rating justify-content-center mb-2 mb-md-3">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-								</div>
-								<a href="master.html" class="btn_main btn_sm btn_2 mx-auto mb-2 mb-md-3">
-									<span class="f_08 light-gray">о мастере</span>
-								</a>
-								<button type="button" class="btn_main btn_sm btn_1 mx-auto">
-									<span class="f_08">Записаться</span>
-								</button>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="master">
-							<img src="img/team/5.png">
-							<div class="p-2 p-md-4">
-								<div class="font-2 f_12 fw_6 mb-md-2"><a href="master.html">Максим</a></div>
-								<div class="font-2 f_09 mb-2 mb-md-3">Парикмахер</div>
-								<div class="rating justify-content-center mb-2 mb-md-3">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-								</div>
-								<a href="master.html" class="btn_main btn_sm btn_2 mx-auto mb-2 mb-md-3">
-									<span class="f_08 light-gray">о мастере</span>
-								</a>
-								<button type="button" class="btn_main btn_sm btn_1 mx-auto">
-									<span class="f_08">Записаться</span>
-								</button>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="master">
-							<img src="img/team/4.png">
-							<div class="p-2 p-md-4">
-								<div class="font-2 f_12 fw_6 mb-md-2"><a href="master.html">Анастасия</a></div>
-								<div class="font-2 f_09 mb-2 mb-md-3">Парикмахер, коллорист</div>
-								<div class="rating justify-content-center mb-2 mb-md-3">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-								</div>
-								<a href="master.html" class="btn_main btn_sm btn_2 mx-auto mb-2 mb-md-3">
-									<span class="f_08 light-gray">о мастере</span>
-								</a>
-								<button type="button" class="btn_main btn_sm btn_1 mx-auto">
-									<span class="f_08">Записаться</span>
-								</button>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="master">
-							<img src="img/team/5.png">
-							<div class="p-2 p-md-4">
-								<div class="font-2 f_12 fw_6 mb-md-2"><a href="master.html">Максим</a></div>
-								<div class="font-2 f_09 mb-2 mb-md-3">Парикмахер</div>
-								<div class="rating justify-content-center mb-2 mb-md-3">
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-									<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-									</svg>
-								</div>
-								<a href="master.html" class="btn_main btn_sm btn_2 mx-auto mb-2 mb-md-3">
-									<span class="f_08 light-gray">о мастере</span>
-								</a>
-								<button type="button" class="btn_main btn_sm btn_1 mx-auto">
-									<span class="f_08">Записаться</span>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button type="button" class="lightest-gray f_09 fw_5 bb_1 mx-auto mt-5">Показать еще</button>
-				<div class="row justify-content-end mt-4">
-					<div class="col-md-6">
-						<nav aria-label="Page navigation">
-							<ul class="pagination">
-								<li class="page-item"><a class="btn_main btn_xs f_08 btn_3" href="#">В начало</a></li>
-								<li class="page-item"><a class="page-link" href="#">...</a></li>
-								<li class="page-item"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link active" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">3</a></li>
-								<li class="page-item"><a class="page-link" href="#">4</a></li>
-								<li class="page-item"><a class="page-link" href="#">5</a></li>
-								<li class="page-item"><a class="page-link" href="#">6</a></li>
-								<li class="page-item"><a class="page-link" href="#">...</a></li>
-								<li class="page-item"><a class="btn_main btn_xs f_08 btn_3" href="#">Дальше</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="col-md-6 col-xxl-3 mt-3 mt-md-0">
-						<div class="d-flex align-items-center justify-content-center justify-content-md-end">
-							<div class="f_08 font-2 me-3">Перейти на страницу</div>
-							<input type="number" class="mini f_08 me-3">
-							<button type="button" class="f_08 btn_3 btn_main btn_xs">Перейти</button>
 						</div>
 					</div>
 				</div>

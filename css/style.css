@@ -644,10 +644,73 @@ header .logo {
 }
 .master-page ul li {margin-bottom: .75em;}
 .master-page table tr td:first-child {text-align: left;}
-
 .review {
     border: 1px solid var(--lightest-gray);
-    padding: 1em;
+    border-radius: 5px;
+    padding: 1.5em;
+}
+.review .name {font-size: 1.5em;}
+.review .text {
+    color: var(--light-gray);
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2em;
+    max-height: 6em;
+    position: relative;
+}
+.review .text .readmore {
+    color: var(--accent);
+    font-weight: 300;
+    text-decoration: unset;
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+    background-color: #fff;
+    padding-left: 4px;
+}
+.review .icon {
+    width: 1.75em;
+    height: 1.75em;
+}
+@media (max-width: 1659px) {
+    .master-page .photo {height: 500px;}
+}
+@media (max-width: 1399px) {
+    .master-page .photo {height: 435px;}
+}
+@media (max-width: 1199px) {
+    .master-page .photo {height: 360px;}
+}
+@media (max-width: 991px) {
+    .master-page .photo {height: 270px;}
+}
+@media (max-width: 767px) {
+    .master-page .photo {
+        height: 600px;
+        margin-bottom: 1em;
+    }
+    .review {font-size: 12px;}
+    .review .text .readmore {bottom: 0px;}
+}
+@media (max-width: 575px) {
+    .master-page .photo {height: 100vw;}
+    .review {padding: 1em;}
+    .review .name {font-size: 1.25em;}
+}
+
+/* section 11 */
+#sec-11 .text p {
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+#sec-12 .social a {border: 1px solid var(--dark-gray);}
+#sec-12 .social svg path {stroke: var(--dark-gray);}
+#sec-12 .social svg.type-2 path {
+    fill: var(--dark-gray);
+    stroke: unset;
 }
 
 
