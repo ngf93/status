@@ -106,7 +106,6 @@ input, textarea, select {
     background: #fff;
     border-radius: 5px;
     padding: .75em 1.5em;
-    width: 100%;
     line-height: normal;
     box-shadow: unset;
 }
@@ -127,6 +126,23 @@ input.mini {
     height: 1.75rem;
     border-radius: 2px;
     text-align: center;
+}
+input[type="checkbox"]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    width: 1em;
+    height: 1em;
+    padding: 0px;
+    border-radius: 2px;
+    
+}
+input[type="checkbox"]:checked {
+    background-image: url(../img/icons/mark.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
 }
 
 /* кнопки */
@@ -216,6 +232,14 @@ button:hover, button:focus, button:active {cursor: pointer;}
     font-family: var(--font-2);
     font-weight: 600;
 }
+
+.see-all[data-state="off"]::before {
+    content: "Смотреть все";
+}
+.see-all[data-state="on"]::before {
+    content: "Свернуть";
+}
+
 @media (max-width: 1199px) {
     .btn-icon .count {line-height: 1.5em;}
 }

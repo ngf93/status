@@ -67,12 +67,108 @@
 			</nav>
 		</div>
 
-		<section >
+		<section id="sec-13">
 			<div class="container">
 				<h1 class="inner">Католог товаров</h1>
 				<div class="row">
 					<div class="col-md-3">
-						<div>Категория:</div>
+						<nav class="left-menu">
+							<div class="font-2 fw_6 f_09 mb-3">Категория:</div>
+							<ul>
+								<li>
+									<button type="button" data-state="off" onclick="toggle(this)">Уход за волосами</button>
+									<ul class="d-none">
+										<li>
+											<button type="button">Шампуни и кондиционеры</button>
+											<ul>
+												<li>
+													<a href="#" class="active">Шампуни</a>
+												</li>
+												<li>
+													<button type="button">Кондиционеры</button>
+												</li>
+												<li>
+													<button type="button">Бальзамы</button>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<button type="button">Маски и сыворотки</button>
+										</li>
+										<li>
+											<button type="button">Краска для волос</button>
+										</li>
+										<li>
+											<button type="button">Стайлинг</button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<button type="button">Уход за лицом</button>
+								</li>
+								<li>
+									<button type="button">Уход за телом</button>
+								</li>
+							</ul>
+
+							<div class="font-2 fw_6 f_09 mt-5 mb-3">Тип волос:</div>
+							<div class="ps-4 expandable-list">
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="hair-type" id="hair-type-1" value="Сухие">
+									<label for="hair-type-1" class="ms-3">Сухие</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="hair-type" id="hair-type-2" value="Тусклые">
+									<label for="hair-type-2" class="ms-3">Тусклые</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="hair-type" id="hair-type-3" value="Окрашенные">
+									<label for="hair-type-3" class="ms-3">Окрашенные</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="hair-type" id="hair-type-4" value="Сухие">
+									<label for="hair-type-4" class="ms-3">Сухие</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="hair-type" id="hair-type-5" value="Тусклые">
+									<label for="hair-type-5" class="ms-3">Тусклые</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="hair-type" id="hair-type-6" value="Окрашенные">
+									<label for="hair-type-6" class="ms-3">Окрашенные</label>
+								</div>
+							</div>
+							<button type="button" data-state="off" class="see-all ps-4 accent f_09 mt-2" onclick="toggleList(this)"></button>
+
+							<div class="font-2 fw_6 f_09 mt-5 mb-3">Бренд:</div>
+							<div class="ps-4 expandable-list">
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="brand" id="brand-1" value="Matrix">
+									<label for="brand-1" class="ms-3">Matrix</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="brand" id="brand-2" value="Otium">
+									<label for="brand-2" class="ms-3">Otium </label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="brand" id="brand-3" value="Concept">
+									<label for="brand-3" class="ms-3">Concept</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="brand" id="brand-4" value="CD">
+									<label for="brand-4" class="ms-3">CD</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="brand" id="brand-5" value="Lador">
+									<label for="brand-5" class="ms-3">Lador</label>
+								</div>
+								<div class="d-flex mb-2">
+									<input type="checkbox" name="brand" id="brand-6" value="Matrix">
+									<label for="brand-6" class="ms-3">Matrix</label>
+								</div>
+							</div>
+							<button type="button" data-state="off" class="see-all ps-4 accent f_09 mt-2" onclick="toggleList(this)"></button>
+						</nav>
 					</div>
 					<div class="col-md-9">
 						<div class="d-flex justify-content-between mb-5">

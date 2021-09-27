@@ -706,12 +706,72 @@ header .logo {
     margin-bottom: 1em;
 }
 
+/* section 12 */
 #sec-12 .social a {border: 1px solid var(--dark-gray);}
 #sec-12 .social svg path {stroke: var(--dark-gray);}
 #sec-12 .social svg.type-2 path {
     fill: var(--dark-gray);
     stroke: unset;
 }
+
+
+/* section 13 */
+/* #sec-13 {} */
+nav.left-menu ul {
+    list-style: none;
+    padding-left: 1em;
+}
+nav.left-menu button, nav.left-menu a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1em;
+}
+nav.left-menu>ul>li>button {
+    background-position: right center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transition: .3s;
+}
+nav.left-menu>ul>li>button[data-state="on"] {
+    background-image: url(../img/icons/caret-up.svg);
+}
+nav.left-menu>ul>li>button[data-state="off"] {
+    background-image: url(../img/icons/caret-down.svg);
+}
+nav.left-menu>ul>li>button, nav.left-menu>ul>li>ul>li>button,
+nav.left-menu>ul>li>a, nav.left-menu>ul>li>ul>li>a {
+    font-family: var(--font-2);
+    font-size: .9em;
+    text-transform: uppercase;
+}
+nav.left-menu>ul>li>ul>li>ul>li>button,
+nav.left-menu>ul>li>ul>li>ul>li>a {
+    font-family: var(--font-2);
+    font-size: .9em;
+    text-transform: initial;
+}
+nav.left-menu>ul>li>button.active, 
+nav.left-menu>ul>li>ul>li>button.active, 
+nav.left-menu>ul>li>ul>li>ul>li>button.active,
+nav.left-menu>ul>li>a.active, 
+nav.left-menu>ul>li>ul>li>a.active, 
+nav.left-menu>ul>li>ul>li>ul>li>a.active {
+    color: var(--accent);
+}
+
+
+.expandable-list {
+    height: calc(3.75em + 1rem);
+    overflow: hidden;
+    transition: .3s;
+}
+.expandable-list.exp{
+    height: calc(6.25em + 2rem);
+    overflow: auto;
+}
+.expandable-list label {line-height: 1.25em;}
+
 
 
 footer {

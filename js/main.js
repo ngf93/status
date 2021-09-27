@@ -2,6 +2,30 @@ function toggleState(btn){
   btn.dataset.state = (btn.dataset.state == 'off') ? 'on' : 'off'
 }
 
+
+/* show/hide element */
+function toggle(btn){
+  // el.style.display = (el.style.display == 'block') ? 'none' : 'block'
+  if(btn.dataset.state == 'off'){
+    btn.dataset.state = 'on';
+    btn.nextElementSibling.classList.remove('d-none');
+  } else {
+    btn.dataset.state = 'off';
+    btn.nextElementSibling.classList.add('d-none');
+  }
+}
+
+/* expandable-list */
+function toggleList(btn){
+  if(btn.dataset.state == 'off'){
+    btn.dataset.state = 'on';
+    btn.previousElementSibling.classList.add('exp');
+  } else {
+    btn.dataset.state = 'off';
+    btn.previousElementSibling.classList.remove('exp');
+  }
+}
+
 /* modal aside */
 // function showAside(btn){
 //   let target = btn.dataset.target;
