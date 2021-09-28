@@ -427,6 +427,7 @@ header .logo {
     transition: .2s;
 }
 .product-menu a.active, .product-menu button.active {color: var(--accent);}
+
 .product {font-family: var(--font-2);}
 .product img {
     width: 100%;
@@ -450,20 +451,56 @@ header .logo {
     min-width: unset;
     min-height: unset;
 }
-.product .btn_main span {
+/* .product .btn_main span {
+    
+} */
+/* .product .btn_main[data-state="on"] {
+    background-color: var(--accent);
+} */
+
+.add-to-cart {
+    height: 1.75em;
+    width: 7.5em;
+    overflow: hidden;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    box-sizing: content-box;
+}
+.add-to-cart .count-enter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 1.75em;
+    width: 100%;
+    margin-top: -1.75em;
+    transition: .3s;
+}
+.add-to-cart .count-enter.visbl {
+    margin-top: 0px;
+}
+.add-to-cart .count-enter button {
+    font-family: var(--font-2);
+    font-size: 1.2em;
+    color: var(--accent);
+    line-height: 1em;
+}
+.add-to-cart button.btn_main {
+    height: 1.75em;
+    width: 100%;
+    border: none;
+    border-radius: 0px;
+}
+.add-to-cart button.btn_main span {
     font-size: .8em;
     color: var(--dark-gray);
     text-transform: initial;
 }
-.product .btn_main[data-state="on"] {
-    background-color: var(--accent);
+.add-to-cart button.btn_main:hover,
+.add-to-cart button.btn_main:focus {
+    background-color: var(--accent-light);
 }
-.product .btn_main[data-state="off"] span::before {
-    content: "В корзину";
-}
-.product .btn_main[data-state="on"] span::before {
-    content: "В корзинe";
-    color: #fff;
+.add-to-cart button.btn_main:active {
+    background-color: var(--accent-dark);
 }
 @media (max-width: 1659px) {
     .product img {height: 220px;}
@@ -716,7 +753,6 @@ header .logo {
 
 
 /* section 13 */
-/* #sec-13 {} */
 nav.left-menu ul {
     list-style: none;
     padding-left: 1em;
@@ -726,24 +762,24 @@ nav.left-menu button, nav.left-menu a {
     width: 100%;
     text-align: left;
     margin-bottom: 1em;
-}
-nav.left-menu>ul>li>button {
-    background-position: right center;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    transition: .3s;
-}
-nav.left-menu>ul>li>button[data-state="on"] {
-    background-image: url(../img/icons/caret-up.svg);
-}
-nav.left-menu>ul>li>button[data-state="off"] {
-    background-image: url(../img/icons/caret-down.svg);
+    color: #4F4F4F;
 }
 nav.left-menu>ul>li>button, nav.left-menu>ul>li>ul>li>button,
 nav.left-menu>ul>li>a, nav.left-menu>ul>li>ul>li>a {
     font-family: var(--font-2);
     font-size: .9em;
     text-transform: uppercase;
+    padding-right: 1em;
+    background-position: right center;
+    background-size: 1em 100%;
+    background-repeat: no-repeat;
+    transition: .3s;
+}
+nav.left-menu>ul>li>[data-state="on"], nav.left-menu>ul>li>ul>li>[data-state="on"] {
+    background-image: url(../img/icons/caret-up.svg);
+}
+nav.left-menu>ul>li>[data-state="off"], nav.left-menu>ul>li>ul>li>[data-state="off"] {
+    background-image: url(../img/icons/caret-down.svg);
 }
 nav.left-menu>ul>li>ul>li>ul>li>button,
 nav.left-menu>ul>li>ul>li>ul>li>a {
@@ -760,6 +796,23 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
     color: var(--accent);
 }
 
+.btn-filter svg {
+    width: 1.75em;
+    height: 1.75em;
+    fill: none;
+}
+.btn-filter svg path {fill: #C4C4C4;}
+.btn-filter.active svg path {fill: var(--accent);}
+
+@media (max-width: 767px){
+    .catalog-menu .catalog-submenu {
+        width: 100%;
+        margin: 1em 0px;
+        background-color: #F2F2F2;
+        padding: .5em 0px;
+    }
+    
+}
 
 .expandable-list {
     height: calc(3.75em + 1rem);

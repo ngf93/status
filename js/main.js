@@ -23,8 +23,25 @@ function toggleList(btn){
   } else {
     btn.dataset.state = 'off';
     btn.previousElementSibling.classList.remove('exp');
+    btn.previousElementSibling.scrollTop = 0;
   }
 }
+
+/* add to cart */
+function addToCart(btn){
+  let elem = btn.previousElementSibling;
+  if(elem.classList.contains('visbl')){
+    elem.classList.remove('visbl');
+  } else {
+    elem.classList.add('visbl');
+  }
+}
+
+function remove(btn){
+  let elem = btn.closest('.count-enter');
+  elem.classList.remove('visbl');
+}
+
 
 /* modal aside */
 // function showAside(btn){
