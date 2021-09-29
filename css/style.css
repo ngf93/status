@@ -428,15 +428,18 @@ header .logo {
 }
 .product-menu a.active, .product-menu button.active {color: var(--accent);}
 
-.product {font-family: var(--font-2);}
-.product img {
+.product {
+    position: relative;
+    font-family: var(--font-2);
+}
+.product img.photo {
     width: 100%;
     height: 250px;
     object-fit: contain;
     filter: grayscale(1);
     transition: .3s;
 }
-.product:hover img {filter: grayscale(0);}
+.product:hover>img {filter: grayscale(0);}
 .product .text {
     color: var(--light-gray);
     font-size: .7em;
@@ -447,16 +450,22 @@ header .logo {
     line-height: 1.3em;
     height: 3.9em;
 }
+.product .mark-fav {
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    width: 2em;
+}
+.product .mark-sale {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    width: 2em;
+}
 .product .btn_main {
     min-width: unset;
     min-height: unset;
 }
-/* .product .btn_main span {
-    
-} */
-/* .product .btn_main[data-state="on"] {
-    background-color: var(--accent);
-} */
 
 .add-to-cart {
     height: 1.75em;
@@ -796,6 +805,7 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
     color: var(--accent);
 }
 
+.catalog-menu {display: none;}
 .btn-filter svg {
     width: 1.75em;
     height: 1.75em;
@@ -804,7 +814,9 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
 .btn-filter svg path {fill: #C4C4C4;}
 .btn-filter.active svg path {fill: var(--accent);}
 
+
 @media (max-width: 767px){
+    .catalog-menu {display: block;}
     .catalog-menu .catalog-submenu {
         width: 100%;
         margin: 1em 0px;
@@ -825,6 +837,51 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
 }
 .expandable-list label {line-height: 1.25em;}
 
+
+
+/* section 14 */
+.swiper-thumbs {
+    height: 310px;
+}
+.swiper-thumbs img {
+    width: 100%;
+    height: 90px;
+    object-fit: contain;
+    border: 2px solid #F2F2F2;
+    border-radius: 5px;
+}
+.swiper-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+}
+.btn-fav svg {
+    width: 2em;
+    height: 2em;
+    fill: none;
+}
+.btn-fav[data-state="off"] span::before {content: "В избранное";}
+.btn-fav[data-state="off"] svg path {
+    fill: white;
+    stroke: var(--accent);
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+.btn-fav[data-state="on"] span::before {content: "В избранном";}
+.btn-fav[data-state="on"] svg path {
+    fill: var(--accent-lightest);
+    stroke: var(--accent);
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+#sec-14 .text {
+    line-height: 1.4em;
+    height: 2.8em;
+    overflow: hidden;
+}
+#sec-14 .text p {
+    line-height: 1.4em;
+}
 
 
 footer {

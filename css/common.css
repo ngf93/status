@@ -464,7 +464,7 @@ nav[aria-label="Page navigation"]{
     overflow: hidden;
     padding-bottom: 3em;
 }
-.swiper-2, .swiper-3, .swiper-4, .swiper-5 {overflow: hidden;}
+.swiper-2, .swiper-3, .swiper-4, .swiper-5, .swiper-thumbs, .swiper-img {overflow: hidden;}
 
 .swiper-pagination {bottom: 0px !important;}
 .swiper-pagination-bullet {
@@ -529,3 +529,5 @@ nav[aria-label="Page navigation"]{
     vertical-align: middle;
     border: none !important;
 }
+.table.table-borderless>tbody {border-top: none;}
+.table.table-borderless tr {border-bottom: none;}

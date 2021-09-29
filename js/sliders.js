@@ -133,6 +133,21 @@ const swiper6 = new Swiper('.swiper-6', {
 });
 console.log('swiper6'+swiper6);
 
+const swiper7 = new Swiper('.swiper-thumbs', {
+    direction: "vertical",
+    spaceBetween: 20,
+    slidesPerView: 3,
+});
+
+const swiper8 = new Swiper('.swiper-img', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    thumbs: {
+        swiper: swiper7,
+    },
+});
+
 if (window.matchMedia("(min-width: 768px)").matches) {
     if(document.querySelector('.product-menu')!= null){
         swiper4.destroy(true, true);
