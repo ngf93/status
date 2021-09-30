@@ -439,7 +439,7 @@ header .logo {
     filter: grayscale(1);
     transition: .3s;
 }
-.product:hover>img.photo {filter: grayscale(0);}
+.product:hover img.photo {filter: grayscale(0);}
 .product .text {
     color: var(--light-gray);
     font-size: .7em;
