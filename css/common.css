@@ -143,12 +143,56 @@ input[type="checkbox"]{
     height: 1em;
     padding: 0px;
     border-radius: 2px;
+    background-color: transparent;
 }
 input[type="checkbox"]:checked {
-    background-image: url(../img/icons/mark.svg);
+    background-image: url(../img/icons/checkbox.svg);
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center;
+}
+input[type="radio"]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    width: 1em;
+    height: 1em;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+input[type="radio"]:checked {
+    background-image: url(../img/icons/radio.svg);
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: center;
+}
+.radio-text {position: relative;}
+.radio-text div {
+    position: relative;
+    z-index: 1;
+    border: 2px solid #F2F2F2;
+    border-radius: 5px;
+    padding: .5em 1em;
+}
+.radio-text input {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+.radio-text input:checked {
+    background: unset;
+    border: 2px solid var(--accent);
 }
 
 input[type="search"] {
@@ -460,11 +504,11 @@ nav[aria-label="Page navigation"]{
 
 
 /* SLIDERS */
-.swiper-1, .swiper-6 {
+.swiper-1, .swiper-6, .swiper-img {
     overflow: hidden;
     padding-bottom: 3em;
 }
-.swiper-2, .swiper-3, .swiper-4, .swiper-5, .swiper-thumbs, .swiper-img {overflow: hidden;}
+.swiper-2, .swiper-3, .swiper-4, .swiper-5, .swiper-thumbs, .swiper-9 {overflow: hidden;}
 
 .swiper-pagination {bottom: 0px !important;}
 .swiper-pagination-bullet {
@@ -501,7 +545,8 @@ nav[aria-label="Page navigation"]{
     stroke-linejoin: round;
 }
 .swiper-2 .swiper-button-prev svg path, .swiper-2 .swiper-button-next svg path,
-.swiper-5 .swiper-button-prev svg path, .swiper-5 .swiper-button-next svg path {
+.swiper-5 .swiper-button-prev svg path, .swiper-5 .swiper-button-next svg path,
+.swiper-9 .swiper-button-prev svg path, .swiper-9 .swiper-button-next svg path {
     stroke: var(--accent);
 }
 @media (max-width: 1199px) {
@@ -514,7 +559,7 @@ nav[aria-label="Page navigation"]{
     .swiper-button-prev svg path, .swiper-button-next svg path {
         stroke: var(--accent);
     }
-    .swiper-1, .swiper-6 {padding-bottom: 2.5em;}
+    .swiper-1, .swiper-6, .swiper-img {padding-bottom: 2.5em;}
     .swiper-pagination-bullet {
         width: .5em;
         height: .5em;

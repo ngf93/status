@@ -72,7 +72,7 @@
 			<div class="container">
 				<h1 class="inner text-start mb-5">MATRIX / Кондиционер KEEP ME VIVID для глазурирования и блеска волос, 300 мл</h1>
 				<div class="row">
-					<div class="col-1 d-flex flex-column justify-content-center">
+					<div class="col-1 d-none d-md-flex flex-column justify-content-center">
 						<div class="swiper-thumbs">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -90,8 +90,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-3">
-						<div class="swiper-img">
+					<div class="col-md-4 col-xxl-3 mb-5 mb-md-0">
+						<div class="swiper-img position-relative">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<img src="img/product/1.jpg" alt="">
@@ -106,15 +106,33 @@
 									<img src="img/product/4.jpg" alt="">
 								</div>
 							</div>
+							<div class="swiper-pagination"></div>
 						</div>
 					</div>
-					<div class="col-3">
-						<div class="font-2 fw_6 mb-2">Объем</div>
-						<div class="d-flex mb-5">
-							<div>300 ml</div>
-							<div class="ms-3">1000 ml</div>
+					<div class="col-sm-6 col-md-5 col-lg-4 col-xxl-3">
+						<div class="d-flex justify-content-between align-items-center d-sm-none mb-3">
+							<div class="font-2 fw_6 mb-2">Цена</div>
+							<div>
+								<div class="font-2 f_13 lightest-gray text-decoration-line-through mb-1">732 ₽</div>
+								<div class="font-2 f_15 fw_5">632 ₽</div>
+							</div>
 						</div>
-						<div class="font-2 fw_6 mb-4">Характиристики</div>
+						
+						<div class="d-flex d-sm-block justify-content-between align-items-center mb-4 mb-sm-0">
+							<div class="font-2 fw_6 mb-sm-2">Объем</div>
+							<div class="d-flex mb-sm-5">
+								<div class="radio-text">
+									<input type="radio" name="size" value="300 ml">
+									<div class="f_09 fs_6">300 ml</div>
+								</div>
+								<div class="radio-text ms-3">
+									<input type="radio" name="size" value="1000 ml">
+									<div class="f_09 fs_6">1000 ml</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="font-2 fw_6 mb-2 mb-sm-4">Характиристики</div>
 						<div class="table-relative">
 							<table class="table table-borderless table-sm">
 								<tbody class="light-gray f_08">
@@ -142,9 +160,10 @@
 							</table>
 						</div>
 					</div>
-					<div class="col-2 offset-1">
-						<div class="font-2 f_13 fw_3 lightest-gray text-decoration-line-through mb-2">732 ₽</div>
-						<div class="font-2 f_15 fw_5 mb-3">632 ₽</div>
+					<div class="d-none d-sm-block col-sm-6 col-md-2 offset-lg-1">
+						<div class="font-2 fw_6 mb-2">Цена</div>
+						<div class="font-2 f_13 lightest-gray text-decoration-line-through mb-2">732 ₽</div>
+						<div class="font-2 f_15 fw_5 mb-4">632 ₽</div>
 						<button type="button" class="btn_main btn_1 mb-3">
 							<img src="img/icons/cart.svg" alt="В корзину" class="me-3">
 							<span class="text-capitalize">В корзину</span>
@@ -156,22 +175,22 @@
 							<span class="text-capitalize"></span>
 						</button>
 					</div>
-					<div class="col-6">
-						<div class="font-2 fw_6 mt-5 mb-2">Описание</div>
+					<div class="col-md-9 col-lg-6">
+						<div class="font-2 fw_6 mt-3 mt-sm-5 mb-2 mb-sm-3">Описание</div>
 						<div class="text font-2 f_08">
 							<p>Деликатный шампунь для сохранения ярких и легко вымывающихся пастельных оттенков, деликатно очищает окрашенные волосы и способствует сохранению насыщенного и многогранного блеска надолго.</p>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias perspiciatis, quo recusandae veritatis dolorum facilis in obcaecati quos ad dolor officia officiis facere culpa ex consequuntur sequi ut eos saepe!</p>
 						</div>
-						<button type="button" class="font-2 bb_1 f_08 accent mt-1">развернуть</button>
+						<button type="button" data-state="off" onclick="readall(this)" class="font-2 bb_1 f_08 accent mt-1">развернуть</button>
 
-						<div class="font-2 fw_6 mt-5 mb-3">Способ применения</div>
+						<div class="font-2 fw_6 mt-4 mt-sm-5 mb-2 mb-sm-3">Способ применения</div>
 						<div class="font-2 f_08">Нанести на влажные волосы. Время выдержки: 1-2 мин. Смыть водой. При попадании в глаза немедленно промыть их водой.</div>
 
-						<div class="font-2 fw_6 mt-5 mb-3">Состав</div>
+						<div class="font-2 fw_6 mt-4 mt-sm-5 mb-2 mb-sm-3">Состав</div>
 						<div class="text font-2 f_08 lightest-gray">
 							<p>AQUA / WATER, SODIUM C14-16 OLEFIN SULFONATE, COCAMIDE MEA, GLYCERIN, COCAMIDOPROPYL BETAINE, GLYCOL DISTEARATE, SODIUM LAUROYL SARCOSINATE, HEXYLENE GLYCOL, PARFUM / FRAGRANCE, CITRIC ACID, SODIUM HYDROXID</p>
 						</div>
-						<button type="button" class="font-2 bb_1 f_08 accent mt-1">развернуть</button>
+						<button type="button" data-state="off" onclick="readall(this)" class="font-2 bb_1 f_08 accent mt-1">развернуть</button>
 					</div>
 				</div>
 			</div>
@@ -180,9 +199,100 @@
 		<section>
 			<div class="container">
 				<h4 class="text-start">С этим товаром заказывают</h4>
+				<div class="position-relative">
+					<div class="swiper-9">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="product">
+									<img src="img/product/1.jpg" alt="" class="photo mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Matrix Кондиционер для окрашенных волос, с антиоксидантами, для глазурирования цвета, Total Results Keep Me Vivid, 300 мл</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product">
+									<img src="img/product/2.jpg" alt="" class="photo mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae dolorem perspiciatis explicabo cumque quidem placeat laborum deserunt, provident laboriosam saepe?</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product">
+									<img src="img/product/3.jpg" alt="" class="photo mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae eum, repellat cum aperiam quibusdam harum! </div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="product">
+									<img src="img/product/4.jpg" alt="" class="photo mb-2 mb-sm-4">
+									<div class="text mb-2 mb-sm-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam commodi earum, impedit blanditiis voluptas doloremque esse omnis. </div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">632 ₽</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-prev">
+							<svg viewBox="0 0 24 62" xmlns="http://www.w3.org/2000/svg">
+								<path d="M21.1192 58.3865L2 30.6932L21.1192 3"/>
+							</svg>
+						</div>
+						<div class="swiper-button-next">
+							<svg viewBox="0 0 25 62" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3.23486 58.3865L22.354 30.6932L3.23486 3"/>
+							</svg>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
-
 	</main>
 
 	<footer class="d-none d-md-block">
@@ -265,7 +375,7 @@
 
 	<footer class="d-block d-md-none mobile">
 		<div class="container h-100 d-flex justify-content-around align-items-center">
-			<a href="index.html" class="active">
+			<a href="index.html">
 				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 					<path d="M13.9999 7.22171L19.8333 12.4717V21.5834H17.4999V14.5834H10.4999V21.5834H8.16659V12.4717L13.9999 7.22171ZM13.9999 4.08337L2.33325 14.5834H5.83325V23.9167H12.8333V16.9167H15.1666V23.9167H22.1666V14.5834H25.6666L13.9999 4.08337Z"/>
 				</svg>
@@ -283,7 +393,7 @@
 				</svg>
 				<div>Услуги</div>				
 			</a>
-			<a href="catalog.html">
+			<a href="catalog.html" class="active">
 				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 					<path d="M7 8.5H2V6.5H7V8.5ZM7 11.5H2V13.5H7V11.5ZM20.59 18.5L16.76 14.67C15.96 15.19 15.02 15.5 14 15.5C11.24 15.5 9 13.26 9 10.5C9 7.74 11.24 5.5 14 5.5C16.76 5.5 19 7.74 19 10.5C19 11.52 18.69 12.46 18.17 13.25L22 17.09L20.59 18.5ZM17 10.5C17 8.85 15.65 7.5 14 7.5C12.35 7.5 11 8.85 11 10.5C11 12.15 12.35 13.5 14 13.5C15.65 13.5 17 12.15 17 10.5ZM2 18.5H12V16.5H2V18.5Z"/>
 				</svg>

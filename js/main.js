@@ -43,6 +43,20 @@ function remove(btn){
 }
 
 
+/* readall */
+function readall(btn){
+  // let elem = btn.previousElementSibling;
+  // elem.style.height = 'auto';
+
+  if(btn.dataset.state == 'off'){
+    btn.dataset.state = 'on';
+    btn.previousElementSibling.style.height = 'auto';
+  } else {
+    btn.dataset.state = 'off';
+    btn.previousElementSibling.style.height = '2.8em';
+  }
+}
+
 /* modal aside */
 // function showAside(btn){
 //   let target = btn.dataset.target;

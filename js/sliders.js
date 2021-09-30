@@ -135,17 +135,59 @@ console.log('swiper6'+swiper6);
 
 const swiper7 = new Swiper('.swiper-thumbs', {
     direction: "vertical",
-    spaceBetween: 20,
+    spaceBetween: 10,
     slidesPerView: 3,
+    breakpoints: {
+        1400: {
+            spaceBetween: 20,
+            slidesPerView: 3,
+        },
+    }
 });
 
 const swiper8 = new Swiper('.swiper-img', {
-    loop: true,
     slidesPerView: 1,
     spaceBetween: 0,
     thumbs: {
         swiper: swiper7,
     },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
+const swiper9 = new Swiper('.swiper-9', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+        },
+        1400: {
+            slidesPerView: 5,
+            spaceBetween: 24,
+        },
+        1660: {
+            slidesPerView: 5,
+            spaceBetween: 48,
+        }
+    }
 });
 
 if (window.matchMedia("(min-width: 768px)").matches) {
