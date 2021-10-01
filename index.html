@@ -480,7 +480,7 @@
 					<div id="map">
 						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A333ae55c8df85ec553d343e39e2166564c596283050f87f1b530765ad79ec4b3&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
 					</div>
-					<button class="callback-anim" type="button">
+					<button class="callback-anim" type="button" data-bs-toggle="modal" data-bs-target="#booking">
 						<span>Онлайн запись</span>
 					</button>
 				</div>
@@ -615,14 +615,96 @@
 					<ul>
 						<li><a href="index.html">Главная</a></li>
 						<li><a href="">Запись</a></li>
-						<li><a href="">Услуги</a></li>
-						<li><a href="">Акции</a></li>
-						<li><a href="">каталог</a></li>
-						<li><a href="">Команда</a></li>
-						<li><a href="">О нас</a></li>
-						<li><a href="">Контакты</a></li>
+						<li><a href="services.html">Услуги</a></li>
+						<li><a href="offers.html">Акции</a></li>
+						<li><a href="catalog.html">каталог</a></li>
+						<li><a href="team.html">Команда</a></li>
+						<li><a href="about.html">О нас</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!-- Online booking -->
+	<div class="modal fade" id="booking" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<form action="" name="bookingForm" id="booking-form">
+					<div id="page-1" class="page active">
+						<div class="title">Онлайн запись</div>
+						<div class="px-4">
+							<div class="line">
+								<div class="left">
+									<img src="img/icons/scissors.svg" alt="Услуга" class="me-4">
+									<button type="button" class="white to-page" data-target="page-2">Услуга</button>
+								</div>
+								<div class="right">
+									<output id="serviceResult"></output>
+									<button type="button" class="del ms-4" data-target="service" onclick="clear(this)">
+										<img src="img/icons/edit_off.svg" alt="Удалить">
+									</button>
+								</div>
+							</div>
+							<div class="line">
+								<div class="left">
+									<img src="img/icons/people_alt.svg" alt="Мастер" class="me-4">
+									<button type="button" class="white to-page">Мастер</button>
+								</div>
+								<div class="right">
+									<div>Максим</div>
+									<button type="button" class="ms-4">
+										<img src="img/icons/edit_off.svg" alt="Удалить">
+									</button>
+								</div>
+							</div>
+							<div class="line">
+								<div class="left">
+									<img src="img/icons/watch_later.svg" alt="Дата и время" class="me-4">
+									<button type="button" class="white">Дата и время</button>
+								</div>
+								<div class="right">
+									<div>7 сентября в 19:00</div>
+									<button type="button" class="ms-4">
+										<img src="img/icons/edit_off.svg" alt="Удалить">
+									</button>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="btn_main btn_1 mx-auto mt-5">
+							<span class="f_09">Записаться</span>
+						</button>
+					</div>
+					<div id="page-2" class="page">
+						<button type="button" class="white to-page" data-target="page-1">
+							<svg width="20" height="30" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 33L2 18L17 3" stroke="#FF7BBA" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+							</svg>								
+						</button>
+						<div class="title">Выбор услуги</div>
+						<div class="px-4">
+							<div class="line justify-content-start">
+								<input type="radio" name="service" id="servID-1" value="Стрижка" data-out="serviceResult">
+								<label for="servID-1" class="ms-4">Стрижка</label>
+							</div>
+							<div class="line justify-content-start">
+								<input type="radio" name="service" id="servID-2" value="Окрашивание" data-out="serviceResult">
+								<label for="servID-2" class="ms-4">Окрашивание</label>
+							</div>
+							<div class="line justify-content-start">
+								<input type="radio" name="service" id="servID-3" value="Укладка" data-out="serviceResult">
+								<label for="servID-3" class="ms-4">Укладка</label>
+							</div>
+						</div>
+					</div>
+				</form>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"></path>
+						<path d="M2.99997 22.9999L13.3447 13L2.99997 3"></path>
+					</svg>
+				</button>
 			</div>
 		</div>
 	</div>

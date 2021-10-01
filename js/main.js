@@ -2,7 +2,6 @@ function toggleState(btn){
   btn.dataset.state = (btn.dataset.state == 'off') ? 'on' : 'off'
 }
 
-
 /* show/hide element */
 function toggle(btn){
   // el.style.display = (el.style.display == 'block') ? 'none' : 'block'
@@ -42,12 +41,8 @@ function remove(btn){
   elem.classList.remove('visbl');
 }
 
-
 /* readall */
 function readall(btn){
-  // let elem = btn.previousElementSibling;
-  // elem.style.height = 'auto';
-
   if(btn.dataset.state == 'off'){
     btn.dataset.state = 'on';
     btn.previousElementSibling.style.height = 'auto';
@@ -56,6 +51,69 @@ function readall(btn){
     btn.previousElementSibling.style.height = '2.8em';
   }
 }
+
+/* Online booking */
+// function toPage(id){
+//   console.log(id);
+//   let pages = document.querySelectorAll('aside');
+// }
+
+window.onload = function() {
+  // let bookingForm = document.getElementById('booking-form');
+  let bookingForm = document.forms.bookingForm;
+  if(bookingForm!=null) {
+    let pages = bookingForm.querySelectorAll('.page');
+    let btnToPage = bookingForm.querySelectorAll('.to-page');
+
+    btnToPage.forEach(function(item, i, arr) {
+      item.addEventListener('click', (event) => {
+        item.closest('.page').classList.remove('active');
+        document.getElementById(item.dataset.target).classList.add('active');
+      });
+    });
+
+    let radioInputs = bookingForm.querySelectorAll('[type="radio"]');
+    radioInputs.forEach(function(item, i, arr) {
+      item.addEventListener('change', (event) => {
+        let inpName = item.name;
+        let output = item.dataset.out;
+        bookingForm.querySelector('#'+output+'').value = bookingForm.querySelectorAll('[name="'+inpName+'"]').value;
+      });
+    });
+
+    let delBtns = bookingForm.querySelectorAll('.del');
+    delBtns.forEach(function(item, i, arr) {
+      item.addEventListener('click', (event) => {
+        clear(item.previousElementSibling, item.dataset.target);
+      });
+    });
+
+    function clear(output, targ){
+      output.innerHTML = "";
+      // let inpName = btn.dataset.target;
+      let inputs = bookingForm.querySelectorAll('[name="'+targ+'"]');
+      inputs.forEach(function(item, i, arr) {
+        item.checked = false;
+      });
+    }
+
+    
+
+    // let radGroup_1 = bookingForm.elements.service;
+    // radGroup_1.forEach(function(item, i, arr) {
+    //   item.addEventListener('change', (event) => {
+    //     bookingForm.elements.serviceResult.value = radGroup_1.value;
+    //   });
+    // });
+    // bookingForm.querySelector('#delService').addEventListener('click', (event) => {
+    //   item.previousElementSibling.innerHTML = "";
+    //   radGroup_1.forEach(function(item, i, arr) {
+    //     item.checked = false;
+    //   });
+    // });
+  }
+}
+
 
 /* modal aside */
 // function showAside(btn){
