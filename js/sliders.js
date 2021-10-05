@@ -190,6 +190,7 @@ const swiper9 = new Swiper('.swiper-9', {
     }
 });
 
+
 if (window.matchMedia("(min-width: 768px)").matches) {
     if(document.querySelector('.product-menu')!= null){
         swiper4.destroy(true, true);

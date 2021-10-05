@@ -195,8 +195,32 @@ input[type="radio"]:checked {
     border: 2px solid var(--accent);
 }
 
-/* .radio-div {position: relative;}
-.radio-div div */
+.radio-div {
+    position: relative;
+    width: 100%;
+}
+.radio-div div {
+    position: relative;
+    z-index: 1;
+}
+.radio-div input {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: unset;
+}
+.radio-div input:checked {background: unset;}
+.radio-div input:checked + div {
+    background-color: rgb(var(--rgb-accent)/45%);
+}
 
 input[type="search"] {
     background: url(../img/icons/search.svg) no-repeat;
@@ -215,6 +239,26 @@ select {
     background-position: calc(100% - .5em) 50%;
     background-size: .6em;
     padding-right: 1.5em;
+}
+
+.input-file-hidden {
+    position: relative;
+    width: fit-content;
+    display: flex;
+}
+.input-file-hidden input {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
 /* кнопки */
@@ -258,7 +302,7 @@ button:hover, button:focus, button:active {cursor: pointer;}
 }
 .btn_2 {
     color: var(--accent);
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid var(--accent);
 }
 .btn_3 {
@@ -276,6 +320,11 @@ button:hover, button:focus, button:active {cursor: pointer;}
     color: #fff;
     background-color: var(--accent-dark);
     border: 1px solid var(--accent-dark);
+}
+.btn_1:disabled, .btn_2:disabled {
+    color: #fff;
+    background-color: var(--lightest-gray);
+    border: 1px solid var(--lightest-gray);
 }
 .btn-icon {
     width: 2em;
@@ -580,48 +629,12 @@ nav[aria-label="Page navigation"]{
 .table.table-borderless>tbody {border-top: none;}
 .table.table-borderless tr {border-bottom: none;}
 
-/********************
-Online booking
-********************/
-#booking-form {
-    min-height: 800px;
-    position: relative;
-}
-#booking-form .page {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-}
-#booking-form .page.active {
-    z-index: 10;
-    opacity: 1;
-}
-#booking-form .title {
-    font-size: 1.8em;
-    text-align: center;
-    margin-bottom: 1em;
-}
-#booking-form .line {
-    font-size: 1.4em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--accent);
-    padding: 1.5em 0;
-}
-#booking-form .line:last-child {border-bottom:none;}
-#booking-form .line .left, #booking-form .line .right {
-    display: flex;
-    align-items: center;
-}
-output:empty + button {opacity: 0;}
 
 
-/* modal offcanvas */
+
+/**********************
+OFFCANVAS
+***********************/
 .btn-close {
     position: absolute;
     top: 1.5em;
@@ -665,12 +678,14 @@ output:empty + button {opacity: 0;}
 }
 .offcanvas .main-menu a {font-weight: 400;}
 
-/* modal */
+/****************** 
+MODAL
+*******************/
 .modal-content {
     background-color: var(--dark-gray);
     border-radius: 0px;
     color: #fff;
-    padding: 1em;
+    padding: 1em 2em;
 }
 .modal-content .btn-close {
     top: 1em;
@@ -691,4 +706,134 @@ output:empty + button {opacity: 0;}
         top: 1em;
         right: 1em;
     }
+
+    .modal-content {padding: 1em;}
 }
+
+
+
+/********************
+Online booking
+********************/
+#booking .modal-dialog {
+    height: 800px;
+    max-height: calc(100% - 4em);
+    margin: 2em auto;
+}
+#booking .modal-dialog .modal-content {height: 100%;}
+#booking-form {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#booking-form .page {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    overflow: auto;
+}
+#booking-form .page.active {
+    z-index: 10;
+    opacity: 1;
+}
+#booking-form .title {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+#booking-form .line {
+    /* font-size: 1.4em; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent);
+    padding: 1.5em 0;
+}
+#booking-form .line:last-child {border-bottom:none;}
+#booking-form .line .left, #booking-form .line .right {
+    display: flex;
+    align-items: center;
+}
+#booking-form .line .left img {width: 1.25em;} 
+#booking-form input {
+    background-color: transparent;
+    color: #fff;
+}
+#booking-form input[type="datetime-local"] {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    width: fit-content;
+    font-size: .9em;
+    width: 250px;
+    padding: 0px;
+}
+#booking-form input[type="datetime-local" i]::-webkit-calendar-picker-indicator {
+    margin-left: 10px;
+}
+#booking-form .btn-back {
+    position: absolute;
+    top: 0em;
+    left: 0.5em;
+}
+#booking-form .btn-back svg {
+    width: 1em;
+    height: 1.5em;
+    fill: none;
+}
+#booking-form .btn-back svg path {
+    stroke: var(--accent);
+    stroke-width: 4px;
+    stroke-linecap: square;
+    stroke-linejoin: round;
+}
+output:empty + button {opacity: 0;}
+@media (max-width: 991px) {
+    #booking-form .f_14 {font-size: 1.2em;}
+    #booking-form input[type="datetime-local"]{width: 160px;}
+}
+@media (max-width: 767px){
+    #booking .modal-dialog {
+        top: 65px;
+        height: calc(100% - 115px);
+        margin: 0px auto;
+    }
+}
+@media (max-width: 575px){
+    #booking-form .title {font-size: 1.4em;}
+    #booking-form input[type="datetime-local"] {width: 130px;}
+}
+
+
+/***************
+quiz
+****************/
+.indicator {
+    position: relative;
+    width: 340px;
+    height: 32px;
+}
+.indicator .line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: calc(100%-32px);
+    left: 16px;
+}
+.indicator .circle {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0%;
+}
+/* .indicator svg {
+    height: 1.6em;
+    width: 17em;
+} */
+/* .fill-pink {}
+.fill-gray {} */

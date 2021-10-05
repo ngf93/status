@@ -59,10 +59,8 @@ function readall(btn){
 // }
 
 window.onload = function() {
-  // let bookingForm = document.getElementById('booking-form');
   let bookingForm = document.forms.bookingForm;
   if(bookingForm!=null) {
-    let pages = bookingForm.querySelectorAll('.page');
     let btnToPage = bookingForm.querySelectorAll('.to-page');
 
     btnToPage.forEach(function(item, i, arr) {
@@ -75,9 +73,9 @@ window.onload = function() {
     let radioInputs = bookingForm.querySelectorAll('[type="radio"]');
     radioInputs.forEach(function(item, i, arr) {
       item.addEventListener('change', (event) => {
-        let inpName = item.name;
         let output = item.dataset.out;
-        bookingForm.querySelector('#'+output+'').value = bookingForm.querySelectorAll('[name="'+inpName+'"]').value;
+        bookingForm.querySelector('#'+output+'').value = item.value;
+        verifyMextstep();
       });
     });
 
@@ -85,6 +83,7 @@ window.onload = function() {
     delBtns.forEach(function(item, i, arr) {
       item.addEventListener('click', (event) => {
         clear(item.previousElementSibling, item.dataset.target);
+        verifyMextstep();
       });
     });
 
@@ -97,6 +96,38 @@ window.onload = function() {
       });
     }
 
+    bookingForm.elements.datetime.addEventListener('input', (event) => {
+      verifyMextstep();
+    });
+    
+    function verifyMextstep(){
+      let flag;
+      let outputsArr = Array.from(bookingForm.querySelectorAll('output'));
+
+      function notNull(element, index, array) {
+        if(element.value){
+          return element;
+        }
+      }
+      let date = bookingForm.elements.datetime.value;
+      console.log('date = '+date);
+      if (outputsArr.every(notNull) && date!=''){
+        flag=true;
+        console.log('flag = '+flag);
+      } else {
+        flag=false;
+        console.log('flag = '+flag);
+      }
+
+      // let flag = outputsArr.every(notNull);
+      if (flag) {
+        console.log('все поля заполнены');
+        bookingForm.querySelector('#next-step').removeAttribute('disabled');
+      } else {
+        console.log('есть незаполненые поля');
+        bookingForm.querySelector('#next-step').setAttribute('disabled', 'disabled');
+      }
+    };
     
 
     // let radGroup_1 = bookingForm.elements.service;
@@ -114,6 +145,28 @@ window.onload = function() {
   }
 }
 
+/* проверка input-ов с атрибутом required и активация/блокировка кнопки submit */
+// function verifyInput(form){
+//   let arr_inputs = Array.from(form.querySelectorAll('input[required]'));
+//   console.log(arr_inputs.length);
+
+//   function notNull(element, index, array) {
+//     if(element.type == 'checkbox' && element.checked){
+//       return element;
+//     } else if(element.type == 'text' && element.value.trim() != '') {
+//       return element;
+//     }
+//   }
+//   let flag = arr_inputs.every(notNull);
+
+//   if (flag) {
+//     console.log('все поля заполнены');
+//     form.querySelector('button[type="submit"]').removeAttribute('disabled');
+//   } else {
+//     console.log('есть не заполненые поля');
+//     form.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
+//   }
+// }
 
 /* modal aside */
 // function showAside(btn){

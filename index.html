@@ -135,9 +135,8 @@
 					<div>
 						<h3>Окрашивание дома с индивидуальным коктейлем!</h3>
 						<div class="text-center text-md-start f_12 font-2 mb-4 mb-md-5">Подберите Ваш индивидуальный оттенок с помощью профессионалов!</div>
-						<button type="button" class="btn_main btn_1 mx-auto ms-md-0 me-md-auto mb-4 mb-md-5"><span class="f_09">Подобрать оттенок</span></button>
+						<button type="button" data-bs-toggle="modal" data-bs-target="#quiz" class="btn_main btn_1 mx-auto ms-md-0 me-md-auto mb-4 mb-md-5"><span class="f_09">Подобрать оттенок</span></button>
 					</div>
-					
 				</div>
 			</div>
 			<div class="remark">*Хотим отметить, что дома вы можете покраситься самостоятельно только в однотонный цвет.</div>
@@ -574,7 +573,7 @@
 				</svg>
 				<div>Главная</div>									
 			</a>
-			<a href="">
+			<a href="" role="button" data-bs-toggle="modal" data-bs-target="#booking">
 				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 					<path d="M19.2083 3.87504H15.2025C14.8 2.76337 13.7458 1.95837 12.5 1.95837C11.2542 1.95837 10.2 2.76337 9.7975 3.87504H5.79167C4.7375 3.87504 3.875 4.73754 3.875 5.79171V21.125C3.875 22.1792 4.7375 23.0417 5.79167 23.0417H19.2083C20.2625 23.0417 21.125 22.1792 21.125 21.125V5.79171C21.125 4.73754 20.2625 3.87504 19.2083 3.87504ZM12.5 3.87504C13.0271 3.87504 13.4583 4.30629 13.4583 4.83337C13.4583 5.36046 13.0271 5.79171 12.5 5.79171C11.9729 5.79171 11.5417 5.36046 11.5417 4.83337C11.5417 4.30629 11.9729 3.87504 12.5 3.87504ZM19.2083 21.125H5.79167V5.79171H7.70833V8.66671H17.2917V5.79171H19.2083V21.125Z"/>
 				</svg>
@@ -634,10 +633,10 @@
 				<form action="" name="bookingForm" id="booking-form">
 					<div id="page-1" class="page active">
 						<div class="title">Онлайн запись</div>
-						<div class="px-4">
+						<div class="px-lg-4 f_14">
 							<div class="line">
 								<div class="left">
-									<img src="img/icons/scissors.svg" alt="Услуга" class="me-4">
+									<img src="img/icons/scissors.svg" alt="Услуга" class="me-2 me-lg-4">
 									<button type="button" class="white to-page" data-target="page-2">Услуга</button>
 								</div>
 								<div class="right">
@@ -649,41 +648,41 @@
 							</div>
 							<div class="line">
 								<div class="left">
-									<img src="img/icons/people_alt.svg" alt="Мастер" class="me-4">
-									<button type="button" class="white to-page">Мастер</button>
+									<img src="img/icons/people_alt.svg" alt="Мастер" class="me-2 me-lg-4">
+									<button type="button" class="white to-page" data-target="page-3">Мастер</button>
 								</div>
 								<div class="right">
-									<div>Максим</div>
-									<button type="button" class="ms-4">
+									<output id="masterResult"></output>
+									<button type="button" class="del ms-4" data-target="master" onclick="clear(this)">
 										<img src="img/icons/edit_off.svg" alt="Удалить">
 									</button>
 								</div>
 							</div>
 							<div class="line">
 								<div class="left">
-									<img src="img/icons/watch_later.svg" alt="Дата и время" class="me-4">
-									<button type="button" class="white">Дата и время</button>
+									<img src="img/icons/watch_later.svg" alt="Дата и время" class="me-2 me-lg-4">
+									<div>Дата и время</div>
 								</div>
 								<div class="right">
-									<div>7 сентября в 19:00</div>
-									<button type="button" class="ms-4">
+									<input type="datetime-local" name="datetime">
+									<!-- <button type="button" class="ms-4">
 										<img src="img/icons/edit_off.svg" alt="Удалить">
-									</button>
+									</button> -->
 								</div>
 							</div>
 						</div>
-						<button type="button" class="btn_main btn_1 mx-auto mt-5">
+						<button type="button" id="next-step" class="btn_main btn_1 mx-auto mt-5 to-page" data-target="page-4" disabled="disabled">
 							<span class="f_09">Записаться</span>
 						</button>
 					</div>
 					<div id="page-2" class="page">
-						<button type="button" class="white to-page" data-target="page-1">
-							<svg width="20" height="30" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M17 33L2 18L17 3" stroke="#FF7BBA" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-							</svg>								
+						<button type="button" class="white to-page btn-back" data-target="page-1">
+							<svg viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 33L2 18L17 3"/>
+							</svg>							
 						</button>
 						<div class="title">Выбор услуги</div>
-						<div class="px-4">
+						<div class="px-lg-4 f_14">
 							<div class="line justify-content-start">
 								<input type="radio" name="service" id="servID-1" value="Стрижка" data-out="serviceResult">
 								<label for="servID-1" class="ms-4">Стрижка</label>
@@ -698,6 +697,124 @@
 							</div>
 						</div>
 					</div>
+					<div id="page-3" class="page">
+						<button type="button" class="white to-page btn-back" data-target="page-1">
+							<svg viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 33L2 18L17 3"/>
+							</svg>							
+						</button>
+						<div class="title">Выбор мастера</div>
+						<div class="px-lg-4">
+							<div class="line py-3">
+								<div class="radio-div">
+									<input type="radio" name="master" data-out="masterResult" value="Максим">
+									<div class="master-avatar">
+										<img src="img/team/5.png" alt="">
+										<div>
+											<div class="f_12 fw_6 mb-2">Максим</div>
+											<div class="f_09 mb-2">Парикмахер универсал</div>
+											<div class="rating">
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="line py-3">
+								<div class="radio-div">
+									<input type="radio" name="master" data-out="masterResult" value="Елена">
+									<div class="master-avatar">
+										<img src="img/team/1.png" alt="">
+										<div>
+											<div class="f_12 fw_6 mb-2">Елена</div>
+											<div class="f_09 mb-2">Парикмахер, коллорист</div>
+											<div class="rating">
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="line py-3">
+								<div class="radio-div">
+									<input type="radio" name="master" data-out="masterResult" value="Екатерина">
+									<div class="master-avatar">
+										<img src="img/team/6.png" alt="">
+										<div>
+											<div class="f_12 fw_6 mb-2">Екатерина</div>
+											<div class="f_09 mb-2">Парикмахер, коллорист</div>
+											<div class="rating">
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="page-4" class="page">
+						<button type="button" class="white to-page btn-back" data-target="page-1">
+							<svg viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 33L2 18L17 3"/>
+							</svg>							
+						</button>
+						<div class="title">Онлайн запись</div>
+						<div class="px-lg-5 pt-5 f_14">
+							<input type="text" placeholder="Имя" class="w-100 mb-3">
+							<input type="text" placeholder="+7 (___) ___ __ __ " class="w-100 mb-3" required>
+							<input type="text" placeholder="e-mail" class="w-100 mb-3">
+							<input type="text" placeholder="Ваш комментарий" class="w-100 mb-4">
+							<div class="d-flex mb-4">
+								<input type="checkbox" id="consent" class="me-3">
+								<label for="consent" class="f_08">Согласие на обработку персональных данных</label>
+							</div>
+						</div>
+						<button type="submit" class="btn_main btn_1 mx-auto mt-5">
+							<span class="f_09">Записаться</span>
+						</button>
+					</div>
 				</form>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
@@ -705,6 +822,51 @@
 						<path d="M2.99997 22.9999L13.3447 13L2.99997 3"></path>
 					</svg>
 				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Quiz -->
+	<div class="modal fade" id="quiz" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content p-5">
+				<div id="quiz-slider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="indicator" style="--filling:75%;">
+								<div class="line"></div>
+								<div class="circle"></div>
+								<div class="circle"></div>
+								<div class="circle"></div>
+								<div class="circle"></div>
+							</div>
+							
+							<div class="font-2 text-center f_18 mb-4">Шаг 1</div>
+							<div class="font-2 f_18 fw_5 text-center mb-5">Пришлите один или несколько  фотопотретов в дневном освещении</div>
+							<div class="row row-cols-2">
+								<div>
+									<img src="img/img0.jpg" alt="" class="img-fluid">
+								</div>
+								<div>
+									<div class="input-file-hidden">
+										<button type="button" class="btn_main btn_2">Загрузить фото</button>
+										<input type="file" multiple>
+									</div>
+									
+								</div>
+							</div>
+							<button type="button" class="btn_main btn_1" data-bs-target="#quiz-slider" data-bs-slide="next"><span>следующий шаг</span></button>
+						</div>
+						<div class="carousel-item">
+							<div>Шаг 2</div>
+							<button type="button" class="btn_main btn_1" data-bs-target="#quiz-slider" data-bs-slide="next"><span>следующий шаг</span></button>
+						</div>
+						<div class="carousel-item">
+							<div>Шаг 3</div>
+							<button type="button" class="btn_main btn_1" data-bs-target="#quiz-slider" data-bs-slide="next"><span>следующий шаг</span></button>
+						</div>
+					  </div>
+				</div>
 			</div>
 		</div>
 	</div>

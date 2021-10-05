@@ -645,6 +645,34 @@ header .logo {
 }
 
 
+.master-avatar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: .75em;
+}
+.master-avatar img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 2em;
+}
+@media (max-width: 991px) {
+    .master-avatar img {
+        width: 100px;
+        height: 100px;
+        margin-right: 1em;
+    }
+}
+@media (max-width: 575px) {
+    .master-avatar img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+
 /* section 9 */
 .offer-info {
     font-family: var(--font-2);
