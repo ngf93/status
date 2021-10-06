@@ -886,6 +886,11 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
     height: 380px;
     object-fit: contain;
 }
+#sec-14 .btn-to-cart img {
+    width: 1.5em;
+    height: 1.5em;
+    object-fit: contain;
+}
 .btn-fav svg {
     width: 2em;
     height: 2em;
@@ -914,6 +919,7 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
 #sec-14 .text p {
     line-height: 1.4em;
 }
+#sec-14 .mobile-btns {display: none;}
 @media (max-width: 1399px){
     .swiper-img img {height: 320px;}
     .swiper-thumbs {height: 272px;}
@@ -927,6 +933,19 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
     .swiper-img img {height: 250px;}
     .swiper-thumbs img {height: 50px;}
     .swiper-thumbs {height: 182px;}
+}
+@media (max-width: 575px){
+    #sec-14 .mobile-btns {
+        position: sticky;
+        bottom: 50px;
+        left: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:stretch;
+        background: rgba(255, 255, 255, 0.8);
+        padding: .5em 0;
+    }
 }
 
 

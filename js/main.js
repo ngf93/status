@@ -52,11 +52,6 @@ function readall(btn){
   }
 }
 
-/* Online booking */
-// function toPage(id){
-//   console.log(id);
-//   let pages = document.querySelectorAll('aside');
-// }
 
 window.onload = function() {
   let bookingForm = document.forms.bookingForm;
@@ -145,58 +140,46 @@ window.onload = function() {
   }
 }
 
-/* проверка input-ов с атрибутом required и активация/блокировка кнопки submit */
-// function verifyInput(form){
-//   let arr_inputs = Array.from(form.querySelectorAll('input[required]'));
-//   console.log(arr_inputs.length);
+var modalQuiz = document.getElementById('quiz');
+modalQuiz.addEventListener('show.bs.modal', function (event) {
+  let arr_slides = Array.from(this.querySelectorAll('.carousel-item'));
+  let count = arr_slides.length;
+  /* indicator */
+  arr_slides.forEach(function(item, i, arr) {
+    let indicator = item.querySelector('.indicators');
+    let activeCount = i+1;
+    let notActive = count-activeCount;
+    let j;
+    let elems = [];
+    for(j = 0; j<activeCount; j++){
+      elems.push('<div class="active"></div>');
+    }
+    for(j = 0; j<notActive; j++){
+      elems.push('<div></div>');
+    }
+    indicator.innerHTML = elems.join(' ');
 
-//   function notNull(element, index, array) {
-//     if(element.type == 'checkbox' && element.checked){
-//       return element;
-//     } else if(element.type == 'text' && element.value.trim() != '') {
-//       return element;
-//     }
-//   }
-//   let flag = arr_inputs.every(notNull);
+    let fraction = 100/(count-1);
+    let filling = fraction*i;
+    indicator.style.setProperty('--filling', filling+'%');
+  });
+});
 
-//   if (flag) {
-//     console.log('все поля заполнены');
-//     form.querySelector('button[type="submit"]').removeAttribute('disabled');
-//   } else {
-//     console.log('есть не заполненые поля');
-//     form.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
-//   }
-// }
+function loadImgs(input){
+  let file;
+  let list = input.closest('.input-file-hidden').nextElementSibling;
+  let arr = [];
+  for(let i = 0; i<input.files.length; i++){
+    file = input.files[i];
+    arr.push('<div>'+file.name+'</div>');
+    console.log(file.name);
+  }
+  list.innerHTML = arr.join(' ');
 
-/* modal aside */
-// function showAside(btn){
-//   let target = btn.dataset.target;
-//   document.getElementById(target).style.left = "0";
-// }
-
-// let aside = document.querySelectorAll('aside');
-// if(aside!=null) {
-//   let arr_asides = Array.from(aside);
-
-//   arr_asides.forEach(function(item, i, arr) {
-//     item.querySelector('.close').addEventListener('click', function(e) {
-//       item.style.left = "-100%";
-//     });
-
-//     document.addEventListener('click', function(e) {
-//       const target = e.target;
-//       const current_aside = target == item || item.contains(target);
-//       // const sel_is_opened = options.classList.contains('opened');
-//       if (!current_aside) {
-//         item.style.left = "-100%";
-//       }
-//     });
-//   });
-
-// }
-
-// function closeAside(btn){
-//   let target = btn.closest('aside');
-//   btn.closest('aside').style.left = "-100%";
-// }
-
+  let reader = new FileReader();
+  reader.onload = function (e) {
+    let img = document.getElementById('file-img');
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(input.files[0]);
+}

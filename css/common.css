@@ -103,7 +103,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 input, textarea {
     border: 1px solid #E0E0E0;
-    background: #fff;
+    background: transparent;
     border-radius: 5px;
     padding: .3em .6em;
     line-height: 1.2em;
@@ -812,28 +812,49 @@ output:empty + button {opacity: 0;}
 /***************
 quiz
 ****************/
-.indicator {
+.indicators {
+    --filling: 0%;
     position: relative;
-    width: 340px;
-    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
 }
-.indicator .line {
+.indicators::before {
+    content: "";
     position: absolute;
+    z-index: 1;
     top: 50%;
+    left: .75em;
+    width: calc(100% - 1.5em);
+    height: .25em;
     transform: translateY(-50%);
-    height: 5px;
-    width: calc(100%-32px);
-    left: 16px;
+    background-color: var(--light-gray);
 }
-.indicator .circle {
-    width: 32px;
-    height: 32px;
+.indicators::after {
+    content: "";
     position: absolute;
-    top: 0%;
+    z-index: 1;
+    top: 50%;
+    left: .75em;
+    width: calc(var(--filling) - 1.5em/2);
+    height: .25em;
+    transform: translateY(-50%);
+    background-color: var(--accent);
 }
-/* .indicator svg {
-    height: 1.6em;
-    width: 17em;
-} */
-/* .fill-pink {}
-.fill-gray {} */
+.indicators div {
+    position: relative;
+    z-index: 2;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+}
+.indicators div:not(:first-child){margin-left: 2em;}
+.indicators div.active {background-color: var(--accent);}
+
+.file-list {
+    color: var(--light-gray);
+}
+.file-list div {margin-bottom: .5em;}
