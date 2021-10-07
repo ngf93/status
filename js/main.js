@@ -84,7 +84,6 @@ window.onload = function() {
 
     function clear(output, targ){
       output.innerHTML = "";
-      // let inpName = btn.dataset.target;
       let inputs = bookingForm.querySelectorAll('[name="'+targ+'"]');
       inputs.forEach(function(item, i, arr) {
         item.checked = false;
@@ -123,20 +122,6 @@ window.onload = function() {
         bookingForm.querySelector('#next-step').setAttribute('disabled', 'disabled');
       }
     };
-    
-
-    // let radGroup_1 = bookingForm.elements.service;
-    // radGroup_1.forEach(function(item, i, arr) {
-    //   item.addEventListener('change', (event) => {
-    //     bookingForm.elements.serviceResult.value = radGroup_1.value;
-    //   });
-    // });
-    // bookingForm.querySelector('#delService').addEventListener('click', (event) => {
-    //   item.previousElementSibling.innerHTML = "";
-    //   radGroup_1.forEach(function(item, i, arr) {
-    //     item.checked = false;
-    //   });
-    // });
   }
 }
 

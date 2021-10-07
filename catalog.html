@@ -78,7 +78,7 @@
 				</div>
 				<div class="catalog-submenu">
 					<div class="container">
-						<button type="button" class="d-flex align-items-center">
+						<button type="button" class="d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#mobile-categories">
 							<img src="img/icons/burger-2.svg" alt="">
 							<span class="light-gray ms-3">Категории</span>
 						</button>
@@ -91,7 +91,7 @@
 							<img src="img/icons/arrow-left.svg" alt="">
 							<span class="light-gray ms-3">Шампуни и кондиционеры</span>
 						</button>
-						<button type="button" class="d-flex align-items-center">
+						<button type="button" class="d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#mobile-categories">
 							<img src="img/icons/burger-2.svg" alt="">
 						</button>
 					</div>
@@ -102,7 +102,7 @@
 						<option value="По возрастанию цены">По возрастанию цены</option>
 						<option value="По убыванию цены">По убыванию цены</option>
 					</select>
-					<button type="button" class="btn-filter active d-flex align-items-center">
+					<button type="button" class="btn-filter active d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#mobile-filters">
 						<span class="light-gray f_11">Фильтры</span>
 						<svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
 							<path d="M7.29692 6.25008H17.7136L12.4948 12.8126L7.29692 6.25008ZM4.43233 5.84383C6.5365 8.54175 10.4219 13.5417 10.4219 13.5417V19.7917C10.4219 20.3647 10.8907 20.8334 11.4636 20.8334H13.5469C14.1198 20.8334 14.5886 20.3647 14.5886 19.7917V13.5417C14.5886 13.5417 18.4636 8.54175 20.5677 5.84383C21.099 5.15633 20.6094 4.16675 19.7448 4.16675H5.25525C4.39067 4.16675 3.90108 5.15633 4.43233 5.84383Z"/>
@@ -162,63 +162,70 @@
 								</li>
 							</ul>
 						</nav>
-						<div class="font-2 fw_6 f_09 mt-5 mb-3">Тип волос:</div>
-						<div class="ps-2 ps-lg-3 ps-xl-4 expandable-list">
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="hair-type" id="hair-type-1" value="Сухие">
-								<label for="hair-type-1" class="ms-1 ms-lg-2 ms-xl-3">Сухие</label>
-							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="hair-type" id="hair-type-2" value="Тусклые">
-								<label for="hair-type-2" class="ms-1 ms-lg-2 ms-xl-3">Тусклые</label>
-							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="hair-type" id="hair-type-3" value="Окрашенные">
-								<label for="hair-type-3" class="ms-1 ms-lg-2 ms-xl-3">Окрашенные</label>
-							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="hair-type" id="hair-type-4" value="Сухие">
-								<label for="hair-type-4" class="ms-1 ms-lg-2 ms-xl-3">Сухие</label>
-							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="hair-type" id="hair-type-5" value="Тусклые">
-								<label for="hair-type-5" class="ms-1 ms-lg-2 ms-xl-3">Тусклые</label>
-							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="hair-type" id="hair-type-6" value="Окрашенные">
-								<label for="hair-type-6" class="ms-1 ms-lg-2 ms-xl-3">Окрашенные</label>
-							</div>
-						</div>
-						<button type="button" data-state="off" class="see-all ps-4 accent f_09 mt-2" onclick="toggleList(this)"></button>
 
-						<div class="font-2 fw_6 f_09 mt-5 mb-3">Бренд:</div>
-						<div class="ps-2 ps-lg-3 ps-xl-4 expandable-list">
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="brand" id="brand-1" value="Matrix">
-								<label for="brand-1" class="ms-1 ms-lg-2 ms-xl-3">Matrix</label>
+						<div class="d-flex justify-content-between mt-5 mb-3">
+							<div class="font-2 fw_6 f_09">Тип волос:</div>
+							<button type="button" class="font-2 f_09 accent">Все</button>
+						</div>
+						<div class="expandable-list">
+							<div class="d-flex justify-content-between mb-2">
+								<label for="hair-type-1" class="me-2">Сухие</label>
+								<input type="checkbox" name="hair-type" id="hair-type-1" value="Сухие">
 							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="brand" id="brand-2" value="Otium">
-								<label for="brand-2" class="ms-1 ms-lg-2 ms-xl-3">Otium </label>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="hair-type-2" class="me-2">Тусклые</label>
+								<input type="checkbox" name="hair-type" id="hair-type-2" value="Тусклые">
 							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="brand" id="brand-3" value="Concept">
-								<label for="brand-3" class="ms-1 ms-lg-2 ms-xl-3">Concept</label>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="hair-type-3" class="me-2">Окрашенные</label>
+								<input type="checkbox" name="hair-type" id="hair-type-3" value="Окрашенные">
 							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="brand" id="brand-4" value="CD">
-								<label for="brand-4" class="ms-1 ms-lg-2 ms-xl-3">CD</label>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="hair-type-4" class="me-2">Сухие</label>
+								<input type="checkbox" name="hair-type" id="hair-type-4" value="Сухие">
 							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="brand" id="brand-5" value="Lador">
-								<label for="brand-5" class="ms-1 ms-lg-2 ms-xl-3">Lador</label>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="hair-type-5" class="me-2">Тусклые</label>
+								<input type="checkbox" name="hair-type" id="hair-type-5" value="Тусклые">
 							</div>
-							<div class="d-flex mb-2">
-								<input type="checkbox" name="brand" id="brand-6" value="Matrix">
-								<label for="brand-6" class="ms-1 ms-lg-2 ms-xl-3">Matrix</label>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="hair-type-6" class="me-2">Окрашенные</label>
+								<input type="checkbox" name="hair-type" id="hair-type-6" value="Окрашенные">
 							</div>
 						</div>
-						<button type="button" data-state="off" class="see-all ps-4 accent f_09 mt-2" onclick="toggleList(this)"></button>
+						<button type="button" data-state="off" class="see-all accent f_09 mt-2" onclick="toggleList(this)"></button>
+
+						<div class="d-flex justify-content-between mt-5 mb-3">
+							<div class="font-2 fw_6 f_09">Бренд:</div>
+							<button type="button" class="font-2 f_09 accent">Все</button>
+						</div>
+						<div class="expandable-list">
+							<div class="d-flex justify-content-between mb-2">
+								<label for="brand-1" class="me-2">Matrix</label>
+								<input type="checkbox" name="brand" id="brand-1" value="Matrix">
+							</div>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="brand-2" class="me-2">Otium </label>
+								<input type="checkbox" name="brand" id="brand-2" value="Otium">
+							</div>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="brand-3" class="me-2">Concept</label>
+								<input type="checkbox" name="brand" id="brand-3" value="Concept">
+							</div>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="brand-4" class="me-2">CD</label>
+								<input type="checkbox" name="brand" id="brand-4" value="CD">
+							</div>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="brand-5" class="me-2">Lador</label>
+								<input type="checkbox" name="brand" id="brand-5" value="Lador">
+							</div>
+							<div class="d-flex justify-content-between mb-2">
+								<label for="brand-6" class="me-2">Matrix</label>
+								<input type="checkbox" name="brand" id="brand-6" value="Matrix">
+							</div>
+						</div>
+						<button type="button" data-state="off" class="see-all accent f_09 mt-2" onclick="toggleList(this)"></button>
 					</div>
 					<div class="col-md-8 col-lg-9">
 						<div class="row g-3 g-sm-4 g-xxl-5 row-cols-2 row-cols-lg-3 row-cols-xxl-4">
@@ -502,7 +509,7 @@
 				</svg>
 				<div>Главная</div>									
 			</a>
-			<a href="">
+			<a href="" role="button" data-bs-toggle="modal" data-bs-target="#booking">
 				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 					<path d="M19.2083 3.87504H15.2025C14.8 2.76337 13.7458 1.95837 12.5 1.95837C11.2542 1.95837 10.2 2.76337 9.7975 3.87504H5.79167C4.7375 3.87504 3.875 4.73754 3.875 5.79171V21.125C3.875 22.1792 4.7375 23.0417 5.79167 23.0417H19.2083C20.2625 23.0417 21.125 22.1792 21.125 21.125V5.79171C21.125 4.73754 20.2625 3.87504 19.2083 3.87504ZM12.5 3.87504C13.0271 3.87504 13.4583 4.30629 13.4583 4.83337C13.4583 5.36046 13.0271 5.79171 12.5 5.79171C11.9729 5.79171 11.5417 5.36046 11.5417 4.83337C11.5417 4.30629 11.9729 3.87504 12.5 3.87504ZM19.2083 21.125H5.79167V5.79171H7.70833V8.66671H17.2917V5.79171H19.2083V21.125Z"/>
 				</svg>
@@ -529,6 +536,7 @@
 		</div>
 	</footer>
 
+	<!-- mobile menu -->
 	<div class="offcanvas offcanvas-start" tabindex="-1" id="burger-menu">
 		<div class="offcanvas-body">
 			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
@@ -537,12 +545,14 @@
 					<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
 				</svg>
 			</button>
-			<div>
+			<div class="box">
 				<h3 class="white text-center text-sm-start mb-5">Меню</h3>
 				<nav class="main-menu">
 					<ul>
 						<li><a href="index.html">Главная</a></li>
-						<li><a href="">Запись</a></li>
+						<li>
+							<a href="" role="button" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#booking">Запись</a>
+						</li>
 						<li><a href="services.html">Услуги</a></li>
 						<li><a href="offers.html">Акции</a></li>
 						<li><a href="catalog.html">каталог</a></li>
@@ -552,6 +562,340 @@
 					</ul>
 				</nav>
 			</div>
+		</div>
+	</div>
+
+	<!-- Online booking -->
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="booking">
+		<div class="offcanvas-body">
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+				<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
+					<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
+				</svg>
+			</button>
+			<div class="box">
+				<form action="" name="bookingForm" id="booking-form">
+					<div id="page-1" class="page active">
+						<div class="title">Онлайн запись</div>
+						<div class="px-lg-4 f_14">
+							<div class="line">
+								<div class="left">
+									<img src="img/icons/scissors.svg" alt="Услуга" class="me-2 me-lg-4">
+									<button type="button" class="white to-page" data-target="page-2">Услуга</button>
+								</div>
+								<div class="right">
+									<output id="serviceResult"></output>
+									<button type="button" class="del ms-2 ms-md-4" data-target="service" onclick="clear(this)">
+										<img src="img/icons/edit_off.svg" alt="Удалить">
+									</button>
+								</div>
+							</div>
+							<div class="line">
+								<div class="left">
+									<img src="img/icons/people_alt.svg" alt="Мастер" class="me-2 me-lg-4">
+									<button type="button" class="white to-page" data-target="page-3">Мастер</button>
+								</div>
+								<div class="right">
+									<output id="masterResult"></output>
+									<button type="button" class="del ms-2 ms-md-4" data-target="master" onclick="clear(this)">
+										<img src="img/icons/edit_off.svg" alt="Удалить">
+									</button>
+								</div>
+							</div>
+							<div class="line">
+								<div class="left">
+									<img src="img/icons/watch_later.svg" alt="Дата и время" class="me-2 me-lg-4">
+									<div>Дата и время</div>
+								</div>
+								<div class="right">
+									<input type="datetime-local" name="datetime">
+									<!-- <button type="button" class="ms-4">
+										<img src="img/icons/edit_off.svg" alt="Удалить">
+									</button> -->
+								</div>
+							</div>
+						</div>
+						<button type="button" id="next-step" class="btn_main btn_1 mx-auto mt-5 to-page" data-target="page-4" disabled="disabled">
+							<span class="f_09">Записаться</span>
+						</button>
+					</div>
+					<div id="page-2" class="page">
+						<button type="button" class="white to-page btn-back" data-target="page-1">
+							<svg viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 33L2 18L17 3"/>
+							</svg>							
+						</button>
+						<div class="title">Выбор услуги</div>
+						<div class="px-lg-4 f_14">
+							<div class="line justify-content-start">
+								<input type="radio" name="service" id="servID-1" value="Стрижка" data-out="serviceResult" class="to-page" data-target="page-1">
+								<label for="servID-1" class="ms-2 ms-md-4">Стрижка</label>
+							</div>
+							<div class="line justify-content-start">
+								<input type="radio" name="service" id="servID-2" value="Окрашивание" data-out="serviceResult" class="to-page" data-target="page-1">
+								<label for="servID-2" class="ms-2 ms-md-4">Окрашивание</label>
+							</div>
+							<div class="line justify-content-start">
+								<input type="radio" name="service" id="servID-3" value="Укладка" data-out="serviceResult" class="to-page" data-target="page-1">
+								<label for="servID-3" class="ms-2 ms-md-4">Укладка</label>
+							</div>
+						</div>
+					</div>
+					<div id="page-3" class="page">
+						<button type="button" class="white to-page btn-back" data-target="page-1">
+							<svg viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 33L2 18L17 3"/>
+							</svg>							
+						</button>
+						<div class="title">Выбор мастера</div>
+						<div class="px-lg-4">
+							<div class="line py-3">
+								<div class="radio-div">
+									<input type="radio" name="master" data-out="masterResult" value="Максим" class="to-page" data-target="page-1">
+									<div class="master-avatar">
+										<img src="img/team/5.png" alt="">
+										<div>
+											<div class="f_12 fw_6 mb-2">Максим</div>
+											<div class="f_09 mb-2">Парикмахер универсал</div>
+											<div class="rating">
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="line py-3">
+								<div class="radio-div">
+									<input type="radio" name="master" data-out="masterResult" value="Елена" class="to-page" data-target="page-1">
+									<div class="master-avatar">
+										<img src="img/team/1.png" alt="">
+										<div>
+											<div class="f_12 fw_6 mb-2">Елена</div>
+											<div class="f_09 mb-2">Парикмахер, коллорист</div>
+											<div class="rating">
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="line py-3">
+								<div class="radio-div">
+									<input type="radio" name="master" data-out="masterResult" value="Екатерина" class="to-page" data-target="page-1">
+									<div class="master-avatar">
+										<img src="img/team/6.png" alt="">
+										<div>
+											<div class="f_12 fw_6 mb-2">Екатерина</div>
+											<div class="f_09 mb-2">Парикмахер, коллорист</div>
+											<div class="rating">
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="grade" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+												<svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="page-4" class="page">
+						<button type="button" class="white to-page btn-back" data-target="page-1">
+							<svg viewBox="0 0 20 36" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17 33L2 18L17 3"/>
+							</svg>							
+						</button>
+						<div class="title">Онлайн запись</div>
+						<div class="px-lg-5 pt-5 f_14">
+							<input type="text" placeholder="Имя" class="w-100 mb-3">
+							<input type="text" placeholder="+7 (___) ___ __ __ " class="w-100 mb-3" required>
+							<input type="text" placeholder="e-mail" class="w-100 mb-3">
+							<input type="text" placeholder="Ваш комментарий" class="w-100 mb-4">
+							<div class="d-flex mb-4">
+								<input type="checkbox" id="consent" class="me-3">
+								<label for="consent" class="f_08">Согласие на обработку персональных данных</label>
+							</div>
+						</div>
+						<button type="submit" class="btn_main btn_1 mx-auto mt-5">
+							<span class="f_09">Записаться</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- mobile categories menu -->
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-categories">
+		<div class="offcanvas-body">
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+				<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
+					<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
+				</svg>
+			</button>
+			<div class="box">
+				<h3 class="white text-center text-sm-start mb-4">Категории</h3>
+				<nav class="left-menu w-100 f_12">
+					<ul>
+						<li>
+							<button type="button" data-state="off" onclick="toggle(this)">Уход за волосами</button>
+							<ul class="d-none">
+								<li>
+									<button type="button" data-state="off" onclick="toggle(this)">Шампуни и кондиционеры</button>
+									<ul class="d-none">
+										<li>
+											<a href="#" class="active">Шампуни</a>
+										</li>
+										<li>
+											<a href="#">Кондиционеры</a>
+										</li>
+										<li>
+											<a href="#">Бальзамы</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<button type="button">Маски и сыворотки</button>
+								</li>
+								<li>
+									<button type="button">Краска для волос</button>
+								</li>
+								<li>
+									<button type="button">Стайлинг</button>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<button type="button">Уход за лицом</button>
+						</li>
+						<li>
+							<button type="button">Уход за телом</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!-- mobile filters -->
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-filters">
+		<div class="offcanvas-body">
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+				<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
+					<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
+				</svg>
+			</button>
+			<div class="box white">
+				<h3 class="text-center text-sm-start">Фильтры</h3>
+				<div class="d-flex justify-content-between mt-4 mb-3">
+					<div class="font-2 fw_6 f_09">Тип волос:</div>
+					<button type="button" class="font-2 f_09 accent">Все</button>
+				</div>
+				<div class="expandable-list">
+					<div class="d-flex justify-content-between mb-2">
+						<label for="hair-type-1" class="me-2">Сухие</label>
+						<input type="checkbox" name="hair-type" id="hair-type-1" value="Сухие">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="hair-type-2" class="me-2">Тусклые</label>
+						<input type="checkbox" name="hair-type" id="hair-type-2" value="Тусклые">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="hair-type-3" class="me-2">Окрашенные</label>
+						<input type="checkbox" name="hair-type" id="hair-type-3" value="Окрашенные">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="hair-type-4" class="me-2">Сухие</label>
+						<input type="checkbox" name="hair-type" id="hair-type-4" value="Сухие">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="hair-type-5" class="me-2">Тусклые</label>
+						<input type="checkbox" name="hair-type" id="hair-type-5" value="Тусклые">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="hair-type-6" class="me-2">Окрашенные</label>
+						<input type="checkbox" name="hair-type" id="hair-type-6" value="Окрашенные">
+					</div>
+				</div>
+				<button type="button" data-state="off" class="see-all accent f_09 mt-2" onclick="toggleList(this)"></button>
+
+				<div class="d-flex justify-content-between mt-4 mb-3">
+					<div class="font-2 fw_6 f_09">Бренд:</div>
+					<button type="button" class="font-2 f_09 accent">Все</button>
+				</div>
+				<div class="expandable-list">
+					<div class="d-flex justify-content-between mb-2">
+						<label for="brand-1" class="me-2">Matrix</label>
+						<input type="checkbox" name="brand" id="brand-1" value="Matrix">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="brand-2" class="me-2">Otium </label>
+						<input type="checkbox" name="brand" id="brand-2" value="Otium">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="brand-3" class="me-2">Concept</label>
+						<input type="checkbox" name="brand" id="brand-3" value="Concept">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="brand-4" class="me-2">CD</label>
+						<input type="checkbox" name="brand" id="brand-4" value="CD">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="brand-5" class="me-2">Lador</label>
+						<input type="checkbox" name="brand" id="brand-5" value="Lador">
+					</div>
+					<div class="d-flex justify-content-between mb-2">
+						<label for="brand-6" class="me-2">Matrix</label>
+						<input type="checkbox" name="brand" id="brand-6" value="Matrix">
+					</div>
+				</div>
+				<button type="button" data-state="off" class="see-all accent f_09 mt-2" onclick="toggleList(this)"></button>
+			</div>
+			<button type="button" class="btn_main btn_1 mt-4">
+				<span class="f_09">Применить фильтры</span>
+			</button>
 		</div>
 	</div>
 

@@ -665,8 +665,14 @@ OFFCANVAS
     background-color: #3D3D3D;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     padding: 5em 3em;
+}
+.offcanvas-body .box {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
 }
 .offcanvas .main-menu ul {
     flex-direction: column;
@@ -700,13 +706,13 @@ MODAL
 }
 @media (max-width: 575px) {
     .offcanvas {width: 100%;}
+    .offcanvas-body {padding: 3em;}
     .offcanvas .main-menu ul {align-items: center;}
     .offcanvas .main-menu a {font-size: 1em;}
     .btn-close {
         top: 1em;
         right: 1em;
     }
-
     .modal-content {padding: 1em;}
 }
 
@@ -715,12 +721,16 @@ MODAL
 /********************
 Online booking
 ********************/
-#booking .modal-dialog {
+/* #booking .modal-dialog {
     height: 800px;
     max-height: calc(100% - 4em);
     margin: 2em auto;
 }
-#booking .modal-dialog .modal-content {height: 100%;}
+#booking .modal-dialog .modal-content {height: 100%;} */
+#booking.offcanvas {
+    width: 850px;
+    color: #fff;
+}
 #booking-form {
     height: 100%;
     width: 100%;
@@ -746,7 +756,6 @@ Online booking
     margin-bottom: 1em;
 }
 #booking-form .line {
-    /* font-size: 1.4em; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -758,7 +767,7 @@ Online booking
     display: flex;
     align-items: center;
 }
-#booking-form .line .left img {width: 1.25em;} 
+#booking-form .line .left img, #booking-form .del img {width: 1.25em;} 
 #booking-form input {
     background-color: transparent;
     color: #fff;
@@ -792,7 +801,11 @@ Online booking
     stroke-linejoin: round;
 }
 output:empty + button {opacity: 0;}
+@media (max-width: 1199px) {
+    #booking.offcanvas {width: 650px;}
+}
 @media (max-width: 991px) {
+    #booking.offcanvas {width: 500px;}
     #booking-form .f_14 {font-size: 1.2em;}
     #booking-form input[type="datetime-local"]{width: 160px;}
 }

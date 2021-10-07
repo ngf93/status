@@ -832,6 +832,8 @@ nav.left-menu>ul>li>ul>li>a.active,
 nav.left-menu>ul>li>ul>li>ul>li>a.active {
     color: var(--accent);
 }
+#mobile-categories nav.left-menu button, #mobile-categories nav.left-menu a {color: #fff;}
+#mobile-categories nav.left-menu button.active, #mobile-categories nav.left-menu a.active {color: var(--accent);}
 
 .catalog-menu {display: none;}
 .btn-filter svg {

@@ -74,49 +74,49 @@
 			<h2>Услуги</h2>
 			<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 justify-content-center g-0 mb-4">
 				<div>
-					<a href="service-page.html" class="serv">
+					<a href="service-page-1.html" class="serv">
 						<img src="img/Стрижка.jpg" alt="">
 						<div>Стрижка</div>
 					</a>
 				</div>
 				<div>
-					<a href="service-page.html" class="serv">
+					<a href="service-page-2.html" class="serv">
 						<img src="img/Окрашивание.jpg" alt="">
 						<div>Окрашивание</div>
 					</a>
 				</div>
 				<div>
-					<a href="service-page.html" class="serv">
+					<a href="service-page-3.html" class="serv">
 						<img src="img/Уход для волос.jpg" alt="">
 						<div>Уход для волос</div>
 					</a>
 				</div>
 				<div>
-					<a href="service-page.html" class="serv">
+					<a href="service-page-4.html" class="serv">
 						<img src="img/Эстетическая трихология.jpg" alt="">
 						<div>Эстетическая трихология</div>
 					</a>
 				</div>
 				<div>
-					<a href="service-page.html" class="serv">
+					<a href="service-page-5.html" class="serv">
 						<img src="img/Ламинирование ресниц.jpg" alt="">
 						<div>Ламинирование ресниц</div>
 					</a>
 				</div>
 				<div>
-					<a href="service-page.html" class="serv">
+					<a href="service-page-6.html" class="serv">
 						<img src="img/Оформление бровей.jpg" alt="">
 						<div>Оформление бровей</div>
 					</a>
 				</div>
 				<div>
-					<a href="service-page.html" class="serv">
+					<a href="service-page-7.html" class="serv">
 						<img src="img/Make Up.jpg" alt="">
 						<div>Макияж</div>
 					</a>
 				</div>
 				<div>
-					<a href="service-page.html" class="serv">
+					<a href="service-page-8.html" class="serv">
 						<img src="img/Маникюр.jpg" alt="">
 						<div>Маникюр</div>
 					</a>
@@ -479,7 +479,7 @@
 					<div id="map">
 						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A333ae55c8df85ec553d343e39e2166564c596283050f87f1b530765ad79ec4b3&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
 					</div>
-					<button class="callback-anim" type="button" data-bs-toggle="modal" data-bs-target="#booking">
+					<button class="callback-anim" type="button" data-bs-toggle="offcanvas" data-bs-target="#booking">
 						<span>Онлайн запись</span>
 					</button>
 				</div>
@@ -609,13 +609,13 @@
 					<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
 				</svg>
 			</button>
-			<div>
+			<div class="box">
 				<h3 class="white text-center text-sm-start mb-5">Меню</h3>
 				<nav class="main-menu">
 					<ul>
 						<li><a href="index.html">Главная</a></li>
 						<li>
-							<button type="button" data-bs-toggle="modal" data-bs-target="#booking">Запись</button>
+							<a href="" role="button" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#booking">Запись</a>
 						</li>
 						<li><a href="services.html">Услуги</a></li>
 						<li><a href="offers.html">Акции</a></li>
@@ -630,9 +630,15 @@
 	</div>
 
 	<!-- Online booking -->
-	<div class="modal fade" id="booking" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="booking">
+		<div class="offcanvas-body">
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+				<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
+					<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
+				</svg>
+			</button>
+			<div class="box">
 				<form action="" name="bookingForm" id="booking-form">
 					<div id="page-1" class="page active">
 						<div class="title">Онлайн запись</div>
@@ -644,7 +650,7 @@
 								</div>
 								<div class="right">
 									<output id="serviceResult"></output>
-									<button type="button" class="del ms-4" data-target="service" onclick="clear(this)">
+									<button type="button" class="del ms-2 ms-md-4" data-target="service" onclick="clear(this)">
 										<img src="img/icons/edit_off.svg" alt="Удалить">
 									</button>
 								</div>
@@ -656,7 +662,7 @@
 								</div>
 								<div class="right">
 									<output id="masterResult"></output>
-									<button type="button" class="del ms-4" data-target="master" onclick="clear(this)">
+									<button type="button" class="del ms-2 ms-md-4" data-target="master" onclick="clear(this)">
 										<img src="img/icons/edit_off.svg" alt="Удалить">
 									</button>
 								</div>
@@ -687,16 +693,16 @@
 						<div class="title">Выбор услуги</div>
 						<div class="px-lg-4 f_14">
 							<div class="line justify-content-start">
-								<input type="radio" name="service" id="servID-1" value="Стрижка" data-out="serviceResult">
-								<label for="servID-1" class="ms-4">Стрижка</label>
+								<input type="radio" name="service" id="servID-1" value="Стрижка" data-out="serviceResult" class="to-page" data-target="page-1">
+								<label for="servID-1" class="ms-2 ms-md-4">Стрижка</label>
 							</div>
 							<div class="line justify-content-start">
-								<input type="radio" name="service" id="servID-2" value="Окрашивание" data-out="serviceResult">
-								<label for="servID-2" class="ms-4">Окрашивание</label>
+								<input type="radio" name="service" id="servID-2" value="Окрашивание" data-out="serviceResult" class="to-page" data-target="page-1">
+								<label for="servID-2" class="ms-2 ms-md-4">Окрашивание</label>
 							</div>
 							<div class="line justify-content-start">
-								<input type="radio" name="service" id="servID-3" value="Укладка" data-out="serviceResult">
-								<label for="servID-3" class="ms-4">Укладка</label>
+								<input type="radio" name="service" id="servID-3" value="Укладка" data-out="serviceResult" class="to-page" data-target="page-1">
+								<label for="servID-3" class="ms-2 ms-md-4">Укладка</label>
 							</div>
 						</div>
 					</div>
@@ -710,7 +716,7 @@
 						<div class="px-lg-4">
 							<div class="line py-3">
 								<div class="radio-div">
-									<input type="radio" name="master" data-out="masterResult" value="Максим">
+									<input type="radio" name="master" data-out="masterResult" value="Максим" class="to-page" data-target="page-1">
 									<div class="master-avatar">
 										<img src="img/team/5.png" alt="">
 										<div>
@@ -739,7 +745,7 @@
 							</div>
 							<div class="line py-3">
 								<div class="radio-div">
-									<input type="radio" name="master" data-out="masterResult" value="Елена">
+									<input type="radio" name="master" data-out="masterResult" value="Елена" class="to-page" data-target="page-1">
 									<div class="master-avatar">
 										<img src="img/team/1.png" alt="">
 										<div>
@@ -768,7 +774,7 @@
 							</div>
 							<div class="line py-3">
 								<div class="radio-div">
-									<input type="radio" name="master" data-out="masterResult" value="Екатерина">
+									<input type="radio" name="master" data-out="masterResult" value="Екатерина" class="to-page" data-target="page-1">
 									<div class="master-avatar">
 										<img src="img/team/6.png" alt="">
 										<div>
@@ -819,12 +825,6 @@
 						</button>
 					</div>
 				</form>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-						<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"></path>
-						<path d="M2.99997 22.9999L13.3447 13L2.99997 3"></path>
-					</svg>
-				</button>
 			</div>
 		</div>
 	</div>

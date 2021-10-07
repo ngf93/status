@@ -73,6 +73,9 @@
 				<div class="row mb-5">
 					<div class="col-md-4">
 						<img src="img/team/5.png" alt="Максим Жданов" class="photo">
+						<button type="button" class="btn_main btn_1 mt-4 mx-auto">
+							<span class="f_09">Записаться</span>
+						</button>
 					</div>
 					<div class="col-md-8">
 						<div class="d-sm-flex justify-content-between align-items-center">
@@ -329,7 +332,7 @@
 				</div>
 				<div class="d-flex justify-content-between align-items-center">
 					<div class="f_12 font-2 fw_6">Работы мастера:</div>
-					<button type="button" class="btn_main btn_1"><span class="f_09">Оставить отзыв</span></button>
+					<button type="button" data-bs-toggle="modal" data-bs-target="#review" class="btn_main btn_1"><span class="f_09">Оставить отзыв</span></button>
 				</div>
 
 				<div class="review mt-4">
@@ -598,7 +601,7 @@
 				</svg>
 				<div>Главная</div>									
 			</a>
-			<a href="">
+			<a href="" role="button" data-bs-toggle="modal" data-bs-target="#booking">
 				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 					<path d="M19.2083 3.87504H15.2025C14.8 2.76337 13.7458 1.95837 12.5 1.95837C11.2542 1.95837 10.2 2.76337 9.7975 3.87504H5.79167C4.7375 3.87504 3.875 4.73754 3.875 5.79171V21.125C3.875 22.1792 4.7375 23.0417 5.79167 23.0417H19.2083C20.2625 23.0417 21.125 22.1792 21.125 21.125V5.79171C21.125 4.73754 20.2625 3.87504 19.2083 3.87504ZM12.5 3.87504C13.0271 3.87504 13.4583 4.30629 13.4583 4.83337C13.4583 5.36046 13.0271 5.79171 12.5 5.79171C11.9729 5.79171 11.5417 5.36046 11.5417 4.83337C11.5417 4.30629 11.9729 3.87504 12.5 3.87504ZM19.2083 21.125H5.79167V5.79171H7.70833V8.66671H17.2917V5.79171H19.2083V21.125Z"/>
 				</svg>
@@ -625,6 +628,7 @@
 		</div>
 	</footer>
 
+	<!-- mobile menu -->
 	<div class="offcanvas offcanvas-start" tabindex="-1" id="burger-menu">
 		<div class="offcanvas-body">
 			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
@@ -633,12 +637,14 @@
 					<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
 				</svg>
 			</button>
-			<div>
+			<div class="box">
 				<h3 class="white text-center text-sm-start mb-5">Меню</h3>
 				<nav class="main-menu">
 					<ul>
 						<li><a href="index.html">Главная</a></li>
-						<li><a href="">Запись</a></li>
+						<li>
+							<a href="" role="button" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#booking">Запись</a>
+						</li>
 						<li><a href="services.html">Услуги</a></li>
 						<li><a href="offers.html">Акции</a></li>
 						<li><a href="catalog.html">каталог</a></li>
@@ -647,6 +653,23 @@
 						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="warning" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="font-2 f_12">Публикация отзыва доступна только авторизированным пользователям</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- review -->
+	<div class="modal fade" id="review" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<h4>Оставьте отзыв о работе мастера</h4>
 			</div>
 		</div>
 	</div>
