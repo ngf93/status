@@ -332,6 +332,7 @@
 				</div>
 				<div class="d-flex justify-content-between align-items-center">
 					<div class="f_12 font-2 fw_6">Работы мастера:</div>
+					<button type="button" data-bs-toggle="modal" data-bs-target="#warning" class="btn_main btn_1"><span class="f_09">Оставить отзыв (не авт.)</span></button>
 					<button type="button" data-bs-toggle="modal" data-bs-target="#review" class="btn_main btn_1"><span class="f_09">Оставить отзыв</span></button>
 				</div>
 
@@ -658,9 +659,18 @@
 	</div>
 
 	<div class="modal fade" id="warning" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="font-2 f_12">Публикация отзыва доступна только авторизированным пользователям</div>
+		<div class="modal-dialog">
+			<div class="modal-content p-4 p-sm-5">
+				<div class="font-2 f_12 text-center">Публикация отзыва доступна только авторизированным пользователям</div>
+				<button type="button" class="btn_main btn_1 mx-auto mt-4">
+					<span>Войти</span>
+				</button>
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
+						<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
+					</svg>
+				</button>
 			</div>
 		</div>
 	</div>
@@ -668,8 +678,71 @@
 	<!-- review -->
 	<div class="modal fade" id="review" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
+			<div class="modal-content p-sm-5">
 				<h4>Оставьте отзыв о работе мастера</h4>
+				<form action="">
+					<div class="row gy-4">
+						<div class="col-4">Оценка работы:</div>
+						<div class="col-8">
+							<div id="rating">
+								<input id="star-5" type="radio" name="reviewStars" value="5">
+								<label title="отлично" for="star-5"></label>
+
+								<input id="star-4" type="radio" name="reviewStars" value="4">
+								<label title="хорошо" for="star-4"></label>
+
+								<input id="star-3" type="radio" name="reviewStars" value="3">
+								<label title="нормально" for="star-3"></label>
+
+								<input id="star-2" type="radio" name="reviewStars" value="2">
+								<label title="неудовлетворительно" for="star-2"></label>
+
+								<input id="star-1" type="radio" name="reviewStars" value="1">
+								<label title="плохо" for="star-1"></label>
+							</div>
+						</div>
+						<div class="col-4">Дата посещения:</div>
+						<div class="col-8">
+							<input type="date" class="white w-100">
+						</div>
+						<div class="col-4">Услуга:</div>
+						<div class="col-8">
+							<select class="white inp-style w-100">
+								<option value="none" selected disabled>Выберите услугу</option>
+								<option value="Услуга 1" class="dark-gray">Услуга 1</option>
+								<option value="Услуга 2" class="dark-gray">Услуга 2</option>
+								<option value="Услуга 3" class="dark-gray">Услуга 3</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<textarea rows="4" placeholder="Ваш комментарий" class="w-100"></textarea>
+						</div>
+					</div>
+					<button type="submit" class="btn_main btn_1 mx-auto mt-4" data-bs-target="#confirmation" data-bs-toggle="modal" data-bs-dismiss="modal">
+						<span class="f_09 text-capitalize">Опубликовать отзыв</span>
+					</button>
+					<div class="text-center f_09 mt-4">Нажимая “Обубликовать отзыв”, вы соглашаетесь <a href="#" class="accent">правилами публикации</a>.</div>
+				</form>
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
+						<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="confirmation" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content p-4 p-sm-5">
+				<div class="font-2 f_12 text-center">Ваш отзыв отправлен на модерацию</div>
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
+						<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>
+					</svg>
+				</button>
 			</div>
 		</div>
 	</div>
