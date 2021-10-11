@@ -329,7 +329,7 @@
 								<button type="button" class="btn_main btn_2 mx-auto mt-3 mt-sm-4 mt-lg-5"><span class="f_09">Подробнее</span></button>
 							</div>
 							<div class="mt-xl-5">
-								<button type="button" class="btn_main btn_1 mx-auto mt-3 mt-sm-4 mt-lg-5"><span class="f_09">Записаться</span></button>
+								<button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="btn_main btn_1 mx-auto mt-3 mt-sm-4 mt-lg-5"><span class="f_09">Записаться</span></button>
 							</div>
 						</div>
 					</div>
@@ -479,7 +479,7 @@
 					<div id="map">
 						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A333ae55c8df85ec553d343e39e2166564c596283050f87f1b530765ad79ec4b3&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
 					</div>
-					<button class="callback-anim" type="button" data-bs-toggle="offcanvas" data-bs-target="#booking">
+					<button class="callback-anim" type="button" data-bs-toggle="offcanvas" data-bs-target="#callback">
 						<span>Онлайн запись</span>
 					</button>
 				</div>
@@ -832,88 +832,90 @@
 	<!-- Quiz -->
 	<div class="modal fade" id="quiz" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-xl">
-			<div class="modal-content p-5">
-				<form action="">
-					<div id="quiz-slider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="indicators mb-4"></div>
-								<div class="font-2 text-center f_15 mb-3">Шаг 1</div>
-								<div class="font-2 f_14 fw_5 text-center mb-5">Пришлите один или несколько  фотопотретов в дневном освещении</div>
-								<div class="row row-cols-2">
-									<div>
-										<img src="img/img0.jpg" alt="" id="file-img" class="img-fluid">
-									</div>
-									<div>
-										<div class="input-file-hidden">
-											<button type="button" class="btn_main btn_2">Загрузить фото</button>
-											<input type="file" multiple oninput="loadImgs(this)">
+			<div class="modal-content p-4 p-sm-5">
+				<div class="box">
+					<form action="">
+						<div id="quiz-slider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="indicators mb-4"></div>
+									<div class="font-2 text-center f_15 mb-3">Шаг 1</div>
+									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Пришлите один или несколько  фотопотретов в дневном освещении</div>
+									<div class="row row-cols-sm-2">
+										<div class="mb-4 mb-sm-0">
+											<img src="img/img0.jpg" alt="" id="file-img" class="img-fluid">
 										</div>
-										<div class="file-list mt-3"></div>
+										<div>
+											<div class="input-file-hidden mx-auto mx-sm-0">
+												<button type="button" class="btn_main btn_2">Загрузить фото</button>
+												<input type="file" multiple oninput="loadImgs(this)">
+											</div>
+											<div class="file-list mt-3"></div>
+										</div>
+									</div>
+									<button type="button" class="btn_main btn_1 mx-auto mt-3 mt-sm-5" data-bs-target="#quiz-slider" data-bs-slide="next"><span class="f_09">следующий шаг</span></button>
+									<div class="text-center f_09 light-gray mt-3">*Ваши фото будет удалены сразу после анализа</div>
+								</div>
+								<div class="carousel-item">
+									<div class="indicators mb-4"></div>
+									<div class="font-2 text-center f_15 mb-3">Шаг 2</div>
+									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Ответьте на несколько вопросов</div>
+									<div class="row justify-content-center">
+										<div class="col-lg-7 col-xxl-6">
+											<div class="font-2 f_12 fw_3 mb-2 mb-sm-3">Желаемый цвет волос:</div>
+											<div class="d-flex justify-content-between font-2 f_11 mb-4 mb-sm-5">
+												<div class="d-flex align-items-center">
+													<input type="radio" name="desired-color" id="darker" value="Темнее">
+													<label for="darker" class="ms-3">Темнее</label>
+												</div>
+												<div class="d-flex align-items-center">
+													<input type="radio" name="desired-color" id="lighter" value="Светлее">
+													<label for="lighter" class="ms-3">Светлее</label>
+												</div>
+											</div>
+
+											<div class="font-2 f_12 fw_3 mb-2 mb-sm-3">Ваши волосы окрашены?</div>
+											<div class="d-flex justify-content-between font-2 f_11 mb-4 mb-sm-5">
+												<div class="d-flex align-items-center">
+													<input type="radio" name="dyed-hair" id="dyed" value="окрашенные">
+													<label for="dyed" class="ms-3">Да</label>
+												</div>
+												<div class="d-flex align-items-center">
+													<input type="radio" name="dyed-hair" id="not-dyed" value="не окрашенные">
+													<label for="not-dyed" class="ms-3">Нет</label>
+												</div>
+											</div>
+
+											<div class="font-2 f_12 fw_3 mb-2 mb-sm-3">Чем?</div>
+											<input type="text" placeholder="Название краски" class="white w-100">
+
+											<div class="d-flex justify-content-between mt-4 mt-sm-5">
+												<button type="button" class="btn_main btn_2 me-4" data-bs-target="#quiz-slider" data-bs-slide="prev"><span class="f_09">Назад</span></button>
+												<button type="button" class="btn_main btn_1" data-bs-target="#quiz-slider" data-bs-slide="next"><span class="f_09">следующий шаг</span></button>
+											</div>
+										</div>
 									</div>
 								</div>
-								<button type="button" class="btn_main btn_1 mx-auto mt-5" data-bs-target="#quiz-slider" data-bs-slide="next"><span class="f_09">следующий шаг</span></button>
-								<div class="text-center f_09 light-gray mt-3">*Ваши фото будет удалены сразу после анализа</div>
-							</div>
-							<div class="carousel-item">
-								<div class="indicators mb-4"></div>
-								<div class="font-2 text-center f_15 mb-3">Шаг 2</div>
-								<div class="font-2 f_14 fw_5 text-center mb-5">Ответьте на несколько вопросов</div>
-								<div class="row justify-content-center">
-									<div class="col-6">
-										<div class="font-2 f_12 fw_3 mb-3">Желаемый цвет волос:</div>
-										<div class="d-flex justify-content-between font-2 f_11 mb-5">
-											<div class="d-flex align-items-center">
-												<input type="radio" name="desired-color" id="darker" value="Темнее">
-												<label for="darker" class="ms-3">Темнее</label>
+								<div class="carousel-item">
+									<div class="indicators mb-4"></div>
+									<div class="font-2 text-center f_15 mb-3">Шаг 3</div>
+									<div class="font-2 f_14 fw_5 text-center mb-1">Оставьте Ваши контактные данные</div>
+									<div class="font-2 f_12 fw_3 text-center mb-4 mb-sm-5">Для получения результатов введите номер телефона</div>
+									<div class="row justify-content-center">
+										<div class="col-lg-7 col-xxl-6">
+											<input type="text" placeholder="+7 (___) ___ __ __" class="w-100">
+											<div class="d-flex justify-content-between mt-4 mt-sm-5">
+												<button type="button" class="btn_main btn_2 me-4" data-bs-target="#quiz-slider" data-bs-slide="prev"><span class="f_09">Назад</span></button>
+												<button type="submit" class="btn_main btn_1"><span class="f_09">Готово</span></button>
 											</div>
-											<div class="d-flex align-items-center">
-												<input type="radio" name="desired-color" id="lighter" value="Светлее">
-												<label for="lighter" class="ms-3">Светлее</label>
-											</div>
+											<div class="text-center f_09 light-gray mt-3">Нажимая “Готово”, Вы соглашаетесь условиями с обработки персональных данных</div>
 										</div>
-
-										<div class="font-2 f_12 fw_3 mb-3">Ваши волосы окрашены?</div>
-										<div class="d-flex justify-content-between font-2 f_11 mb-5">
-											<div class="d-flex align-items-center">
-												<input type="radio" name="dyed-hair" id="dyed" value="окрашенные">
-												<label for="dyed" class="ms-3">Да</label>
-											</div>
-											<div class="d-flex align-items-center">
-												<input type="radio" name="dyed-hair" id="not-dyed" value="не окрашенные">
-												<label for="not-dyed" class="ms-3">Нет</label>
-											</div>
-										</div>
-
-										<div class="font-2 f_12 fw_3 mb-3">Чем?</div>
-										<input type="text" placeholder="Название краски" class="white w-100">
-
-										<div class="d-flex justify-content-between mt-5">
-											<button type="button" class="btn_main btn_2 me-4" data-bs-target="#quiz-slider" data-bs-slide="prev"><span class="f_09">Назад</span></button>
-											<button type="button" class="btn_main btn_1" data-bs-target="#quiz-slider" data-bs-slide="next"><span class="f_09">следующий шаг</span></button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="indicators mb-4"></div>
-								<div class="font-2 text-center f_15 mb-3">Шаг 3</div>
-								<div class="font-2 f_14 fw_5 text-center mb-1">Оставьте Ваши контактные данные</div>
-								<div class="font-2 f_12 fw_3 text-center mb-5">Для получения результатов введите номер телефона</div>
-								<div class="row justify-content-center">
-									<div class="col-6">
-										<input type="text" placeholder="+7 (___) ___ __ __" class="w-100">
-										<div class="d-flex justify-content-between mt-5">
-											<button type="button" class="btn_main btn_2 me-4" data-bs-target="#quiz-slider" data-bs-slide="prev"><span class="f_09">Назад</span></button>
-											<button type="submit" class="btn_main btn_1"><span class="f_09">Готово</span></button>
-										</div>
-										<div class="text-center f_09 light-gray mt-3">Нажимая “Готово”, Вы соглашаетесь условиями с обработки персональных данных</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 				<button type="button" class="btn-close" data-bs-dismiss="modal">
 					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 						<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
@@ -924,16 +926,23 @@
 		</div>
 	</div>
 
-	<!-- callback -->
+	<!-- callback simple -->
 	<div class="modal fade" id="callback" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form action="">
-					<input type="text" placeholder="Имя" class="w-100 mb-3">
-					<input type="text" placeholder="Номер телефона" class="w-100 mb-3">
-					<textarea name="" rows="3" placeholder="Комментарий" class="w-100 mb-4"></textarea>
-					<button type="submit" class="btn_main btn_1">Отправить</button>
-				</form>
+				<div class="box">
+					<form action="">
+						<h4>Онлайн запись</h4>
+						<input type="text" placeholder="Имя" class="w-100 mb-3">
+						<input type="text" placeholder="Номер телефона" class="w-100 mb-3">
+						<textarea name="" rows="3" placeholder="Комментарий" class="w-100 mb-4"></textarea>
+						<div class="d-flex mb-4">
+							<input type="checkbox" id="consent" class="me-3">
+							<label for="consent" class="f_08">Согласие на обработку персональных данных</label>
+						</div>
+						<button type="submit" class="btn_main btn_1 mx-auto">Отправить</button>
+					</form>
+				</div>
 				<button type="button" class="btn-close" data-bs-dismiss="modal">
 					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 						<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>

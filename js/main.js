@@ -126,29 +126,31 @@ window.onload = function() {
 }
 
 var modalQuiz = document.getElementById('quiz');
-modalQuiz.addEventListener('show.bs.modal', function (event) {
-  let arr_slides = Array.from(this.querySelectorAll('.carousel-item'));
-  let count = arr_slides.length;
-  /* indicator */
-  arr_slides.forEach(function(item, i, arr) {
-    let indicator = item.querySelector('.indicators');
-    let activeCount = i+1;
-    let notActive = count-activeCount;
-    let j;
-    let elems = [];
-    for(j = 0; j<activeCount; j++){
-      elems.push('<div class="active"></div>');
-    }
-    for(j = 0; j<notActive; j++){
-      elems.push('<div></div>');
-    }
-    indicator.innerHTML = elems.join(' ');
+if(modalQuiz!=null) {
+  modalQuiz.addEventListener('show.bs.modal', function (event) {
+    let arr_slides = Array.from(this.querySelectorAll('.carousel-item'));
+    let count = arr_slides.length;
+    /* indicator */
+    arr_slides.forEach(function(item, i, arr) {
+      let indicator = item.querySelector('.indicators');
+      let activeCount = i+1;
+      let notActive = count-activeCount;
+      let j;
+      let elems = [];
+      for(j = 0; j<activeCount; j++){
+        elems.push('<div class="active"></div>');
+      }
+      for(j = 0; j<notActive; j++){
+        elems.push('<div></div>');
+      }
+      indicator.innerHTML = elems.join(' ');
 
-    let fraction = 100/(count-1);
-    let filling = fraction*i;
-    indicator.style.setProperty('--filling', filling+'%');
+      let fraction = 100/(count-1);
+      let filling = fraction*i;
+      indicator.style.setProperty('--filling', filling+'%');
+    });
   });
-});
+}
 
 function loadImgs(input){
   let file;

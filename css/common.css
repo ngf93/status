@@ -706,9 +706,18 @@ MODAL
     border-radius: 0px;
     color: #fff;
     padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 .modal-content .btn-close {
     top: 1em;
+}
+.modal-content .box {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
 }
 
 @media (max-width: 767px) {
