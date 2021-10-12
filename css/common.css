@@ -394,6 +394,7 @@ h1 {
     font-weight: 500;
     text-align: left;
     margin-bottom: .5em;
+    text-transform: uppercase;
 }
 h1.inner {
     font-size: 1.8em;

@@ -125,7 +125,7 @@ window.onload = function() {
   }
 }
 
-var modalQuiz = document.getElementById('quiz');
+let modalQuiz = document.getElementById('quiz');
 if(modalQuiz!=null) {
   modalQuiz.addEventListener('show.bs.modal', function (event) {
     let arr_slides = Array.from(this.querySelectorAll('.carousel-item'));
@@ -149,6 +149,9 @@ if(modalQuiz!=null) {
       let filling = fraction*i;
       indicator.style.setProperty('--filling', filling+'%');
     });
+
+    let arr_btns = Array.from(this.querySelectorAll('button[data-bs-slide="next"]'));
+    arr_btns.forEach(function(item, i, arr) {});
   });
 }
 

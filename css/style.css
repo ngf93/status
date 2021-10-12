@@ -48,10 +48,21 @@ header .logo {
 
 /* section 1 */
 #sec-1 {
-    background: url(../img/bg/bg1.png) no-repeat center;
-    background-size: cover;
+    /* background: url(../img/bg/bg1.jpg) no-repeat #1A1A1A; */
+    /* background-position: right center;
+    background-size: auto 100%; */
+    background: #181818;
     height: 850px;
     padding-top: 11em;
+    position: relative;
+}
+.sec-1-bg {
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: auto;
 }
 @media (max-width: 1659px) {
     #sec-1 {height: 800px;}
@@ -61,6 +72,11 @@ header .logo {
 }
 @media (max-width: 1199px) {
     #sec-1 {height: 700px;}
+    .sec-1-bg {
+        width: 70%;
+        object-fit: cover;
+        object-position: left center;
+    }
 }
 @media (max-width: 991px) {
     #sec-1 {
@@ -74,6 +90,7 @@ header .logo {
         padding-top: 3em;
     }
 }
+@media (max-width: 575px) {.sec-1-bg {width: 80%;}}
 
 /* section 2 */
 .serv {
@@ -310,6 +327,7 @@ header .logo {
     height: 3.9em;
 }
 .employee-preview {
+    display: block;
     font-family: var(--font-2);
     text-align: center;
 }
