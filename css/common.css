@@ -283,6 +283,8 @@ button {
     display: block;
 }
 button:hover, button:focus, button:active {cursor: pointer;}
+button:disabled {pointer-events: none;}
+button:not(:disabled){pointer-events: auto;}
 .btn_main {
     border-radius: 5px;
     display: flex;

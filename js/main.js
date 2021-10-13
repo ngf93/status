@@ -149,11 +149,49 @@ if(modalQuiz!=null) {
       let filling = fraction*i;
       indicator.style.setProperty('--filling', filling+'%');
     });
-
-    let arr_btns = Array.from(this.querySelectorAll('button[data-bs-slide="next"]'));
-    arr_btns.forEach(function(item, i, arr) {});
   });
 }
+
+function verifyInp(input){
+  let field = input.closest('fieldset');
+  let inputs = Array.from(field.querySelectorAll('.verify'));
+  let btn = field.querySelector('button[data-bs-slide="next"]');
+
+  if(inputs.length == 0){
+    return;
+  } else {
+    let flag = inputs.every(notNull);
+
+    if (flag){
+      console.log('все поля заполнены');
+      btn.removeAttribute('disabled');
+    } else {
+      console.log('есть не заполненые поля');
+      btn.setAttribute('disabled', 'disabled');
+    }
+  }
+
+  function notNull(element, index, array) {
+    if(element.type == 'radio' || element.type == 'checkbox'){
+      let name = element.name;
+      let arrInps = Array.from(field.querySelectorAll('input[name="'+name+'"]'));
+      console.log(arrInps.some(isChecked));
+      if(arrInps.some(isChecked)){return element;}
+    } else if (element.type == 'text' && element.value.trim() != ''){
+      return element;
+    } else if (element.type == 'file' && element.value != null) {
+      return element;
+    }
+  }
+
+  function isChecked(el){
+    console.log('value = '+el.value.trim());
+    if(el.checked && el.value.trim() != ''){
+      return el;
+    }
+  }
+  
+};
 
 function loadImgs(input){
   let file;
