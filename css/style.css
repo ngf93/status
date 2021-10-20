@@ -525,11 +525,15 @@ header .logo {
     left: .5em;
     width: 2em;
 }
-.product .mark-sale {
+.product .right-marks {
     position: absolute;
     top: .5em;
     right: .5em;
     width: 2em;
+}
+.product .right-marks img {
+    width: 100%;
+    margin-bottom: .5em;
 }
 .product .btn_main {
     min-width: unset;

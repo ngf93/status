@@ -298,7 +298,7 @@ button:not(:disabled){pointer-events: auto;}
     text-transform: uppercase;
     transition: .5s;
     min-width: 12.5em;
-    min-height: 3.5em;
+    min-height: 3em;
 }
 .btn_main:hover, .btn_main:focus, .btn_main:active {cursor: pointer;}
 .btn_sm {
@@ -383,7 +383,7 @@ button:not(:disabled){pointer-events: auto;}
 @media (max-width: 575px) {
     .btn_main {
         min-width: unset;
-        min-height: 2.7em;
+        min-height: 2.5em;
         padding: .5em 1em;
     }
 }
