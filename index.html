@@ -206,7 +206,7 @@
 			<div class="row flex-lg-row-reverse row-cols-lg-2">
 				<div class="pb-4 pb-lg-0">
 					<div class="d-none d-lg-flex row row-cols-3 gy-4 gy-xl-5 mb-4 mb-xl-5">
-						<div>
+						<!-- <div>
 							<div class="employee-preview">
 								<img src="img/sample.jpg" alt="Максим Жданов" class="mb-2">
 								<div class="f_12 dark-gray fw_6 mb-1">Максим Жданов</div>
@@ -219,7 +219,7 @@
 								<div class="f_12 dark-gray fw_6 mb-1">Руслан Петров</div>
 								<div class="light-gray f_09">Парикмахер, стилист</div>
 							</div>
-						</div>
+						</div> -->
 						<div>
 							<div class="employee-preview active">
 								<img src="img/team/natalia.jpg" alt="Наталья Ворон" class="mb-2">
@@ -613,7 +613,7 @@
 					<div class="fw_3">г.Казань, улица Меридианная, 3</div>
 
 					<div class="fw_7 mt-3 mt-sm-4 mb-1 mb-sm-3">Вопросы и предложения:</div>
-					<div class="fw_3"><a href="mailto:Status@mail.ru">Status@mail.ru</a></div>
+					<div class="fw_3"><a href="mailto:Salon-status.online@yandex.ru">Salon-status.online@yandex.ru</a></div>
 				</div>
 				<div class="col-6 col-sm-7 col-md-8 col-lg-7 col-xl-6 col-xxl-5 position-relative">
 					<div id="map">
@@ -989,12 +989,12 @@
 									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Пришлите один или несколько  фотопотретов в дневном освещении</div>
 									<div class="row row-cols-sm-2">
 										<div class="mb-4 mb-sm-0">
-											<img src="img/img0.jpg" alt="" id="file-img" class="img-fluid">
+											<img src="img/sample.jpg" alt="" id="file-img-1" class="img-fluid">
 										</div>
 										<div>
 											<div class="input-file-hidden mx-auto mx-sm-0">
 												<button type="button" class="btn_main btn_2">Загрузить фото</button>
-												<input type="file" class="verify" id="inp-file" multiple oninput="loadImgs(this); verifyInp(this);">
+												<input type="file" class="verify" id="inp-file-1" data-illustartion="file-img-1" multiple oninput="loadImgs(this); verifyInp(this);">
 											</div>
 											<div class="file-list mt-3"></div>
 										</div>
@@ -1005,10 +1005,54 @@
 								<fieldset class="carousel-item">
 									<div class="indicators mb-4"></div>
 									<div class="font-2 text-center f_15 mb-3">Шаг 2</div>
+									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Фото корней (дневное освещение)</div>
+									<div class="row row-cols-sm-2">
+										<div class="mb-4 mb-sm-0">
+											<img src="img/sample.jpg" alt="" id="file-img-2" class="img-fluid">
+										</div>
+										<div>
+											<div class="input-file-hidden mx-auto mx-sm-0">
+												<button type="button" class="btn_main btn_2">Загрузить фото</button>
+												<input type="file" class="verify" id="inp-file-2" data-illustartion="file-img-2" multiple oninput="loadImgs(this); verifyInp(this);">
+											</div>
+											<div class="file-list mt-3"></div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between mt-4 mt-sm-5">
+										<button type="button" class="btn_main btn_2 me-4" data-bs-target="#quiz-slider" data-bs-slide="prev"><span class="f_09">Назад</span></button>
+										<button type="button" class="btn_main btn_1" data-bs-target="#quiz-slider" data-bs-slide="next" disabled="disabled"><span class="f_09">следующий шаг</span></button>
+									</div>
+									<div class="text-center f_09 light-gray mt-3">*Ваши фото будет удалены сразу после анализа</div>
+								</fieldset>
+								<fieldset class="carousel-item">
+									<div class="indicators mb-4"></div>
+									<div class="font-2 text-center f_15 mb-3">Шаг 3</div>
+									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Фото всей длины (дневное освещение)</div>
+									<div class="row row-cols-sm-2">
+										<div class="mb-4 mb-sm-0">
+											<img src="img/sample.jpg" alt="" id="file-img-3" class="img-fluid">
+										</div>
+										<div>
+											<div class="input-file-hidden mx-auto mx-sm-0">
+												<button type="button" class="btn_main btn_2">Загрузить фото</button>
+												<input type="file" class="verify" id="inp-file-3" data-illustartion="file-img-3" multiple oninput="loadImgs(this); verifyInp(this);">
+											</div>
+											<div class="file-list mt-3"></div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between mt-4 mt-sm-5">
+										<button type="button" class="btn_main btn_2 me-4" data-bs-target="#quiz-slider" data-bs-slide="prev"><span class="f_09">Назад</span></button>
+										<button type="button" class="btn_main btn_1" data-bs-target="#quiz-slider" data-bs-slide="next" disabled="disabled"><span class="f_09">следующий шаг</span></button>
+									</div>
+									<div class="text-center f_09 light-gray mt-3">*Ваши фото будет удалены сразу после анализа</div>
+								</fieldset>
+								<fieldset class="carousel-item">
+									<div class="indicators mb-4"></div>
+									<div class="font-2 text-center f_15 mb-3">Шаг 4</div>
 									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Ответьте на несколько вопросов</div>
 									<div class="row justify-content-center">
 										<div class="col-lg-7 col-xxl-6">
-											<div class="font-2 f_12 fw_3 mb-2 mb-sm-3">Желаемый цвет волос:</div>
+											<div class="font-2 f_12 fw_3 mb-2 mb-sm-3">Хотите цвет темнее или светлее?</div>
 											<div class="d-flex justify-content-between font-2 f_11 mb-4 mb-sm-5">
 												<div class="d-flex align-items-center">
 													<input type="radio" class="verify" name="desired-color" id="darker" value="Темнее" oninput="verifyInp(this);">
@@ -1020,7 +1064,7 @@
 												</div>
 											</div>
 
-											<div class="font-2 f_12 fw_3 mb-2 mb-sm-3">Ваши волосы окрашены?</div>
+											<div class="font-2 f_12 fw_3 mb-2 mb-sm-3">Ваши волосы сейчас окрашены?</div>
 											<div class="d-flex justify-content-between font-2 f_11 mb-4 mb-sm-5">
 												<div class="d-flex align-items-center">
 													<input type="radio" class="verify" name="dyed-hair" id="dyed" value="окрашенные" oninput="verifyInp(this);">
@@ -1033,7 +1077,7 @@
 											</div>
 
 											<div class="font-2 f_12 fw_3 mb-2 mb-sm-3">Чем?</div>
-											<input type="text" placeholder="Название краски" class="verify white w-100" oninput="verifyInp(this);">
+											<input type="text" placeholder="Название краски" class="white w-100">
 
 											<div class="d-flex justify-content-between mt-4 mt-sm-5">
 												<button type="button" class="btn_main btn_2 me-4" data-bs-target="#quiz-slider" data-bs-slide="prev"><span class="f_09">Назад</span></button>
@@ -1044,7 +1088,7 @@
 								</fieldset>
 								<fieldset class="carousel-item">
 									<div class="indicators mb-4"></div>
-									<div class="font-2 text-center f_15 mb-3">Шаг 3</div>
+									<div class="font-2 text-center f_15 mb-3">Шаг 5</div>
 									<div class="font-2 f_14 fw_5 text-center mb-1">Оставьте Ваши контактные данные</div>
 									<div class="font-2 f_12 fw_3 text-center mb-4 mb-sm-5">Для получения результатов введите номер телефона</div>
 									<div class="row justify-content-center">

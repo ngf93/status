@@ -52,7 +52,7 @@ function readall(btn){
   }
 }
 
-
+/* online booking */
 window.onload = function() {
   let bookingForm = document.forms.bookingForm;
   if(bookingForm!=null) {
@@ -204,9 +204,10 @@ function loadImgs(input){
   }
   list.innerHTML = arr.join(' ');
 
+  let illustration = input.dataset.illustartion;
   let reader = new FileReader();
   reader.onload = function (e) {
-    let img = document.getElementById('file-img');
+    let img = document.getElementById(illustration);
     img.src = e.target.result;
   };
   reader.readAsDataURL(input.files[0]);

@@ -1024,6 +1024,76 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
 }
 
 
+/* section 15 */
+.cart-item {
+    display: grid;
+    grid-template-columns: 240px auto 120px;
+    grid-template-rows: 164px 50px;
+    grid-gap: 24px 24px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+}
+.cart-item img {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.cart-item .info {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-family: var(--font-2);
+}
+.cart-item .price {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    font-family: var(--font-2);
+}
+.cart-item .btns {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.btn-fav2 svg, .btn-del svg {
+    width: 1.75em;
+    height: 1.75em;
+    fill: none;
+}
+.btn-fav2[data-state="off"] svg path {
+    fill: var(--lightest-gray);
+    stroke: var(--lightest-gray);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    transition: .3s ease-in-out;
+}
+.btn-fav2[data-state="off"]:hover svg path {
+    fill: var(--accent-light);
+    stroke: var(--accent-light);
+}
+.btn-fav2[data-state="on"] svg path {
+    fill: var(--accent);
+    stroke: var(--accent);
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+.btn-del svg path {fill: var(--lightest-gray); transition: .3s ease-in-out;}
+.btn-del:hover svg path {fill: var(--accent-light);}
+
+.cart-result {
+    border-radius: 5px;
+    border: 1px solid #E0E0E0;
+    padding: 1em;
+    background-color: #fff;
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+
 footer {
     background-color: #202020;
     color: #fff;
