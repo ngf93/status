@@ -190,6 +190,13 @@ const swiper9 = new Swiper('.swiper-9', {
     }
 });
 
+const swiper10 = new Swiper('.pa-menu', {
+    loop: false,
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    freeMode: true,
+});
+
 
 if (window.matchMedia("(min-width: 768px)").matches) {
     if(document.querySelector('.product-menu')!= null){

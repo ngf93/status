@@ -292,9 +292,9 @@ select.inp-style {
 }
 @media (max-width: 767px){
     select.inp-style {
-        padding: .5em 1em .5em .5em;
+        padding: .5em 1.2em .5em .5em;
         background-position: calc(100% - .25em) 50%;
-        background-size: .7em;
+        background-size: .8em;
     }
 }
 

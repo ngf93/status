@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Status - Личный кабинет - Профиль</title>
+	<title>Status - Личный кабинет - Избранные товары</title>
 	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -63,21 +63,22 @@
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="index.html">Главная</a></li>
 					<li class="breadcrumb-item"><a href="personal-account-1.html">Личный кабинет</a></li>
+					<li class="breadcrumb-item"><a href="personal-account-2.html">Избранное</a></li>
 				</ol>
 			</nav>
 		</div>
 
 		<section id="sec-16">
-			<h1 class="inner mb-md-5">Профиль</h1>
+			<h1 class="inner mb-md-5">Избранное</h1>
 			<div class="d-md-none mobile-nav mb-4">
 				<div class="container">
 					<nav class="pa-menu">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide swiper-slide-active">
-								<a href="personal-account-1.html" class="active">Профиль</a>
-							</div>
 							<div class="swiper-slide">
-								<a href="personal-account-2.html">Избранные товары</a>
+								<a href="personal-account-1.html">Профиль</a>
+							</div>
+							<div class="swiper-slide swiper-slide-active">
+								<a href="personal-account-2.html" class="active">Избранные товары</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="personal-account-3.html">Мои заказы</a>
@@ -98,10 +99,10 @@
 						<nav>
 							<ul>
 								<li>
-									<a href="personal-account-1.html" class="active">Профиль</a>
+									<a href="personal-account-1.html">Профиль</a>
 								</li>
 								<li>
-									<a href="personal-account-2.html">Избранные товары</a>
+									<a href="personal-account-2.html" class="active">Избранные товары</a>
 								</li>
 								<li>
 									<a href="personal-account-3.html">Мои заказы</a>
@@ -116,101 +117,200 @@
 						</nav>
 					</div>
 					<div class="col-md-9">
-						<form action="" class="profile">
-							<div class="row align-items-center font-2 gx-2 gx-md-4 gy-3 gy-md-4 gy-lg-5">
-								<div class="col-4 col-xl-3">
-									<div class="f_14 light-gray">Имя:</div>
-								</div>
-								<div class="col-8 col-xl-7">
-									<input class="w-100 f_14" type="text" placeholder="Анастасия">
-								</div>
-								<div class="col-4 col-xl-3">
-									<div class="f_14 light-gray">Фамилия:</div>
-								</div>
-								<div class="col-8 col-xl-7">
-									<input class="w-100 f_14" type="text" placeholder="Смирнова">
-								</div>
-								<div class="col-4 col-xl-3">
-									<div class="f_14 light-gray">Пол:</div>
-								</div>
-								<div class="col-8 col-xl-7 d-flex align-items-center f_12">
-									<input type="radio" name="gender" value="female" id="female" class="me-1 me-md-2">
-									<label for="female" class="me-3 me-md-5">Женский</label>
-									<input type="radio" name="gender" value="male" id="male" class="me-1 me-md-2">
-									<label for="male">Мужской</label>
-								</div>
-								<div class="col-4 col-xl-3">
-									<div class="f_14 light-gray">Дата рождения:</div>
-								</div>
-								<div class="col-8 col-xl-7 d-flex align-items-center f_14">
-									<select class="inp-style">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-										<option value="10">10</option>
-									</select>
-									<select class="inp-style ms-1 ms-sm-2 ms-lg-4">
-										<option value="января">января</option>
-										<option value="февраля">февраля</option>
-										<option value="марта">марта</option>
-										<option value="апреля">апреля</option>
-										<option value="мая">мая</option>
-										<option value="июня">июня</option>
-										<option value="июля">июля</option>
-										<option value="августа">августа</option>
-										<option value="сентября">сентября</option>
-										<option value="октября">октября</option>
-										<option value="ноября">ноября</option>
-										<option value="декабря">декабря</option>
-									</select>
-									<select class="inp-style ms-1 ms-sm-2 ms-lg-4">
-										<option value="1990">1990</option>
-										<option value="1991">1991</option>
-										<option value="1992">1992</option>
-										<option value="1993">1993</option>
-										<option value="1994">1994</option>
-										<option value="1995">1995</option>
-										<option value="1996">1996</option>
-										<option value="1997">1997</option>
-										<option value="1998">1998</option>
-										<option value="1999">1999</option>
-										<option value="2000">2000</option>
-										<option value="2001">2001</option>
-										<option value="2002">2002</option>
-										<option value="2003">2003</option>
-										<option value="2004">2004</option>
-										<option value="2005">2005</option>
-									</select>
-								</div>
-								<div class="col-4 col-xl-3">
-									<div class="f_14 light-gray">Телефон:</div>
-								</div>
-								<div class="col-8 col-xl-7">
-									<input class="w-100 f_14" type="text" placeholder="+7 (962) 123 56 89">
-								</div>
-								<div class="col-4 col-xl-3">
-									<div class="f_14 light-gray">Email:</div>
-								</div>
-								<div class="col-8 col-xl-7">
-									<input class="w-100 f_14" type="text" placeholder="Email@mail.com">
-								</div>
-								<div class="col-md-8 col-xl-7 offset-md-4 offset-xl-3 d-flex align-items-center f_12">
-									<input type="checkbox" name="gender" value="female" id="female" class="me-2">
-									<label for="female" class="flex-1 me-5">Получать уведомления о наших акциях</label>
-								</div>
-								<div class="col-md-8 col-xl-7 offset-md-4 offset-xl-3">
-									<button type="submit" class="btn_main btn_1 mx-auto mx-md-0">
-										<span class="f_09">Редактировать</span>
-									</button>
+						<div class="row g-3 g-sm-4 row-cols-2 row-cols-lg-3 row-cols-xxl-4">
+							<div>
+								<div class="product">
+									<a href="product-1.html"><img src="img/product/Шампунь восстанавливающий Nutri-Repair (vegan), 300 мл.jpg" alt="" class="photo mb-2 mb-sm-4"></a>
+									<div class="text mb-2 mb-sm-4">Шампунь восстанавливающий Nutri-Repair (vegan), 300 мл</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">846 ₽</div>
+									</div>
+									<img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav">
+									<div class="right-marks">
+										<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+										<img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale">
+									</div>
 								</div>
 							</div>
-						</form>
+							<div>
+								<div class="product">
+									<a href="product-2.html"><img src="img/product/Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg" alt="" class="photo mb-2 mb-sm-4"></a>
+									<div class="text mb-2 mb-sm-4">Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">846 ₽</div>
+									</div>
+									<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
+									<div class="right-marks">
+										<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+										<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<a href="product-2.html"><img src="img/product/Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg" alt="" class="photo mb-2 mb-sm-4"></a>
+									<div class="text mb-2 mb-sm-4">Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">846 ₽</div>
+									</div>
+									<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
+									<div class="right-marks">
+										<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+										<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<a href="product-2.html"><img src="img/product/Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg" alt="" class="photo mb-2 mb-sm-4"></a>
+									<div class="text mb-2 mb-sm-4">Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">846 ₽</div>
+									</div>
+									<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
+									<div class="right-marks">
+										<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+										<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<a href="product-2.html"><img src="img/product/Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg" alt="" class="photo mb-2 mb-sm-4"></a>
+									<div class="text mb-2 mb-sm-4">Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">846 ₽</div>
+									</div>
+									<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
+									<div class="right-marks">
+										<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+										<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<a href="product-2.html"><img src="img/product/Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg" alt="" class="photo mb-2 mb-sm-4"></a>
+									<div class="text mb-2 mb-sm-4">Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">846 ₽</div>
+									</div>
+									<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
+									<div class="right-marks">
+										<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+										<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<a href="product-2.html"><img src="img/product/Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg" alt="" class="photo mb-2 mb-sm-4"></a>
+									<div class="text mb-2 mb-sm-4">Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">846 ₽</div>
+									</div>
+									<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
+									<div class="right-marks">
+										<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+										<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="product">
+									<a href="product-2.html"><img src="img/product/Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg" alt="" class="photo mb-2 mb-sm-4"></a>
+									<div class="text mb-2 mb-sm-4">Шампунь для сохранения цвета окрашенных волос Color Care (vegan), 300 мл.jpg</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="add-to-cart">
+											<div class="count-enter">
+												<button type="button" onclick="remove(this)">-</button>
+												<div class="fw_5 f_08">
+													<span class="">1</span><span> шт</span>
+												</div>
+												<button type="button">+</button>
+											</div>
+											<button type="button" class="btn_main px-3 px-sm-4 py-2" onclick="addToCart(this)"><span class="f_08">В корзину</span></button>
+										</div>
+										<div class="f_13 fw_5 black">846 ₽</div>
+									</div>
+									<!-- <img src="img/icons/mark-favorite.png" alt="Избранное" class="mark-fav"> -->
+									<div class="right-marks">
+										<img src="img/icons/mark-new.png" alt="Скидка" class="mark-sale">
+										<!-- <img src="img/icons/mark-sale.png" alt="Скидка" class="mark-sale"> -->
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
