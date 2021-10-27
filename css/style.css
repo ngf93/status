@@ -1170,6 +1170,13 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
     color: var(--accent);
     font-weight: 500;
 }
+
+.order-preview {
+    border: 1px solid var(--lightest-gray);
+    border-radius: 5px;
+    padding: 1.5em 3em;
+
+}
 @media (max-width: 767px){
     .profile .f_14, .profile .f_12 {font-size: 1em;}
 }
