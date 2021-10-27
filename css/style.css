@@ -1175,7 +1175,10 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
     border: 1px solid var(--lightest-gray);
     border-radius: 5px;
     padding: 1.5em 3em;
-
+}
+.order-info {
+    background-color: #F7F7F7;
+    padding: 2em;
 }
 @media (max-width: 767px){
     .profile .f_14, .profile .f_12 {font-size: 1em;}
