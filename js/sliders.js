@@ -131,7 +131,6 @@ const swiper6 = new Swiper('.swiper-6', {
         }
     }
 });
-console.log('swiper6'+swiper6);
 
 const swiper7 = new Swiper('.swiper-thumbs', {
     direction: "vertical",
@@ -203,6 +202,12 @@ if (window.matchMedia("(min-width: 768px)").matches) {
         swiper4.destroy(true, true);
     }
     if(document.querySelector('.swiper-6')!= null){
+        swiper6.destroy(true, true);
+    }
+} 
+
+if (window.matchMedia("(max-width: 991px)").matches) {
+    if(document.querySelector('.swiper-order')!= null){
         swiper6.destroy(true, true);
     }
 } 
