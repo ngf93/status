@@ -203,11 +203,15 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     }
     if(document.querySelector('.swiper-6')!= null){
         swiper6.destroy(true, true);
+        console.log('swiper6 destroy');
     }
 } 
 
-if (window.matchMedia("(max-width: 991px)").matches) {
-    if(document.querySelector('.swiper-order')!= null){
-        swiper6.destroy(true, true);
+if (window.matchMedia("(max-width: 767px)").matches) {
+    if(document.querySelector('.product-menu')!= null){
+        swiper4.init();
+    }
+    if(document.querySelector('.swiper-6')!= null){
+        swiper6.init();
     }
 } 
