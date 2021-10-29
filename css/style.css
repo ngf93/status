@@ -1199,13 +1199,26 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
     height: 320px;
     object-fit: contain;
 }
+.pa-review .icon-1 {width: 1.75em;}
+.pa-review .icon-2 {width: 1.5em;}
+
+.booking {
+    border: 1px solid var(--lightest-gray);
+    border-radius: 5px;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 @media (max-width: 1659px){
     .order-full .swiper-6 .product {margin: 0 .5em;}
+    .pa-review-img {height: 280px;}
 }
 @media (max-width: 1399px){
     .swiper-6 .swiper-wrapper .swiper-slide {width: calc(100% / 3);}
     .order-full .swiper-6 .product {margin: 0 1em;}
+    .pa-review-img {height: 250px;}
 }
 @media (max-width: 991px){
     .order-full .title {font-size: 1.25em;}
@@ -1218,6 +1231,8 @@ nav.left-menu>ul>li>ul>li>ul>li>a.active {
 }
 @media (max-width: 575px){
     .order-preview {padding: 1em;}
+    .pa-review {padding: 1em;}
+    .pa-review .icon-2 {width: 2em;}
 }
 
 
