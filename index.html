@@ -979,7 +979,7 @@
 		<div class="modal-dialog modal-xl">
 			<div class="modal-content p-4 p-sm-5">
 				<div class="box">
-					<form action="">
+					<form action="" id="quiz-form">
 						<div id="quiz-slider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
 							<div class="carousel-inner">
 								<fieldset class="carousel-item active">
@@ -988,7 +988,7 @@
 									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Пришлите один или несколько фотопортретов в дневном освещении</div>
 									<div class="row row-cols-sm-2">
 										<div class="mb-4 mb-sm-0">
-											<img src="img/sample.jpg" alt="" id="file-img-1" class="img-fluid">
+											<img src="img/sample.jpg" alt="" id="file-img-1" class="load-img img-fluid">
 										</div>
 										<div>
 											<div class="input-file-hidden mx-auto mx-sm-0">
@@ -1007,7 +1007,7 @@
 									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Фото корней (дневное освещение)</div>
 									<div class="row row-cols-sm-2">
 										<div class="mb-4 mb-sm-0">
-											<img src="img/sample.jpg" alt="" id="file-img-2" class="img-fluid">
+											<img src="img/sample.jpg" alt="" id="file-img-2" class="load-img img-fluid">
 										</div>
 										<div>
 											<div class="input-file-hidden mx-auto mx-sm-0">
@@ -1029,7 +1029,7 @@
 									<div class="font-2 f_14 fw_5 text-center mb-4 mb-sm-5">Фото всей длины (дневное освещение)</div>
 									<div class="row row-cols-sm-2">
 										<div class="mb-4 mb-sm-0">
-											<img src="img/sample.jpg" alt="" id="file-img-3" class="img-fluid">
+											<img src="img/sample.jpg" alt="" id="file-img-3" class="load-img img-fluid">
 										</div>
 										<div>
 											<div class="input-file-hidden mx-auto mx-sm-0">
@@ -1105,7 +1105,7 @@
 						</div>
 					</form>
 				</div>
-				<button type="button" class="btn-close" data-bs-dismiss="modal">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" onclick="clearQuiz('quiz-form')">
 					<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 						<path d="M23.0001 2.99995L13.345 12.9999L23.0001 22.9999"/>
 						<path d="M2.99997 22.9999L13.3447 13L2.99997 3"/>

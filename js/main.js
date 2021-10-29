@@ -126,6 +126,7 @@ window.onload = function() {
 }
 
 let modalQuiz = document.getElementById('quiz');
+
 if(modalQuiz!=null) {
   modalQuiz.addEventListener('show.bs.modal', function (event) {
     let arr_slides = Array.from(this.querySelectorAll('.carousel-item'));
@@ -150,7 +151,10 @@ if(modalQuiz!=null) {
       indicator.style.setProperty('--filling', filling+'%');
     });
   });
+  modalQuiz.addEventListener('hide.bs.modal', function (event) {
+  });
 }
+
 
 function verifyInp(input){
   let field = input.closest('fieldset');
@@ -211,4 +215,22 @@ function loadImgs(input){
     img.src = e.target.result;
   };
   reader.readAsDataURL(input.files[0]);
+}
+
+var myQuiz = document.querySelector('#quiz-form');
+var carousel = new bootstrap.Carousel(myQuiz);
+function clearQuiz(id){
+  let form = document.getElementById(id);
+
+  let imgs = Array.from(form.querySelectorAll('.load-img'));
+  imgs.forEach(function(item, i, arr) {
+    item.src = 'img/sample.jpg';
+  });
+
+  let lists = Array.from(form.querySelectorAll('.file-list'));
+  lists.forEach(function(item, i, arr) {
+    item.innerHTML = "";
+  });
+
+  carousel.to('0');
 }
